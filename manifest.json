@@ -1,0 +1,18 @@
+{
+    "name": "Spaci Bau",
+    "short_name": "Spaci Bau",
+    "description": "Wir bieten maßgeschneiderte Türinstallationen, Fensteraustausch und Reparatur, Tür- und Fensterwartung, Sicherheitslösungen, Spezialtüren und -fenster sowie Beratung und Designservices. Entdecken Sie hochwertige Lösungen für Ihre Türen und Fensterbedürfnisse. Kontaktieren Sie uns noch heute für eine individuelle Beratung!",
+    "theme_color": "#ff7523",
+    "background_color": "#FFF",
+    "start_url": "/",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "./assets/images/manifest.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ]
+  }
+  

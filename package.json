@@ -1,0 +1,27 @@
+{
+  "name": "UNIQUE Baulemente",
+  "version": "1.1.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npx tailwindcss -i ./src/input.css -o ./assets/dist/output.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fontsource/poppins": "^5.0.4",
+    "jshint-stylish": "^2.2.1",
+    "tailwindcss": "^3.3.2"
+  },
+  "devDependencies": {
+    "grunt": "^1.6.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-connect": "^3.0.0",
+    "grunt-contrib-jshint": "^3.2.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.1.0",
+    "tailwindcss-animated": "^1.0.1"
+  }
+}
