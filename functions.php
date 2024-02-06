@@ -1,6 +1,7 @@
 <?php 
 
 // Include the file to register menus
+require_once get_template_directory() . '/config/Config.php';
 require_once get_template_directory() . '/config/register-menu.php';
 require_once get_template_directory() . '/config/PostType.php';
 require_once get_template_directory() . '/config/breadcrumbs.php';
@@ -16,6 +17,7 @@ function unique_baulemente_theme_enqueue_scripts() {
   wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/assets/js/header.js', array( 'jquery' ), '1.1.0', false );
   wp_enqueue_script( 'custom-modal-script', get_stylesheet_directory_uri() . '/assets/js/modal.js', array( 'jquery' ), '1.1.0', false );
   wp_enqueue_script( 'custom-scroll-script', get_stylesheet_directory_uri() . '/assets/js/scrollPosition.js', array( 'jquery' ), '1.1.0', false );
+  wp_enqueue_script( 'slider-script', get_stylesheet_directory_uri() . '/assets/js/slider.js', array( 'jquery' ), '1.1.0', false );
 }
 add_action( 'wp_enqueue_scripts', 'unique_baulemente_theme_enqueue_scripts' );
 

@@ -6,6 +6,7 @@ module.exports = {
     "./parts/*.{php,html,js}",
     "./components/*.{php,html,js}",
     "./templates/*.{php,html,js}",
+    "./modules/*.{php,html,js}",
   ],
   safelist: [
     'fixed',

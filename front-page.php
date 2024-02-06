@@ -7,9 +7,15 @@
 </div>
 <div id="content" class="content-loaded" style="display: none;">
 
+<?php 
+  $modules = get_field('modules'); 
+  for( $i = 0; $i < count($modules); $i++){
+    getModules($modules[$i]['acf_fc_layout']);
+  }
+   ?>
 
-<?php echo do_shortcode('[smartslider3 slider="3"]'); ?>
-<?php get_template_part('components/strategy-planning'); ?>
+
+
 <?php get_template_part('components/services'); ?>
 <?php echo do_shortcode('[carousel title="Unsere Produkte"]') ?>
 
