@@ -1,10 +1,10 @@
 <?php 
 
 // Include the file to register menus
+require_once get_template_directory() . '/config/PostType.php';
 require_once get_template_directory() . '/config/ACF.php';
 require_once get_template_directory() . '/config/Config.php';
 require_once get_template_directory() . '/config/register-menu.php';
-require_once get_template_directory() . '/config/PostType.php';
 require_once get_template_directory() . '/config/breadcrumbs.php';
 
 add_theme_support( 'post-thumbnails' );

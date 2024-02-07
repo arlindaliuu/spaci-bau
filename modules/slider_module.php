@@ -5,7 +5,6 @@
             $data = $modules[$i];
         }
     }
-   
 ?>
     <!--- Section Slider ---->
     <section>
