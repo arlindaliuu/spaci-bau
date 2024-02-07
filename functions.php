@@ -1,6 +1,7 @@
 <?php 
 
 // Include the file to register menus
+require_once get_template_directory() . '/config/ACF.php';
 require_once get_template_directory() . '/config/Config.php';
 require_once get_template_directory() . '/config/register-menu.php';
 require_once get_template_directory() . '/config/PostType.php';
@@ -123,5 +124,7 @@ add_shortcode('carousel', 'custom_carousel_shortcode');
 add_shortcode('carousel-ourteam', 'custom_carousel_team_shortcode');
 add_shortcode('why-us', 'custom_why_us_shortcode');
 add_shortcode('services', 'custom_services_shortcode');
+
+
 
 ?>
