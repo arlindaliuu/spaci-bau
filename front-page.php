@@ -1,15 +1,16 @@
 <?php get_header(); ?>
-<div id="loader">
+<!-- <div id="loader">
   <div class="battery-container">
     <div class="battery-fill" id="battery-fill"></div>
   </div>
   <div class="battery-text">Wird geladen...</div>
 </div>
-<div id="content" class="content-loaded" style="display: none;">
+<div id="content" class="content-loaded" style="display: none;"> -->
 
 <?php 
-  $modules = get_field('modules'); 
-  for( $i = 0; $i < count($modules); $i++){
+  $modules = get_field('field_1', get_the_ID()); 
+  
+  for( $i = 0; $i < count($modules) - 1; $i++){
     getModules($modules[$i]['acf_fc_layout']);
   }
    ?>

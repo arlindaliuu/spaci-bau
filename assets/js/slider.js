@@ -17,6 +17,9 @@ window.addEventListener("load", function(){
             for(let i = 0; i < sliderImages.length; i++){
                 sliderImages[i].classList.add('hidden');
             }
+            if(sliderImages[slideIndex - 1].classList.contains("first:block")){
+                sliderImages[slideIndex - 1].classList.remove('first:block');
+            }
             sliderImages[slideIndex - 1].classList.remove('hidden');
             sliderImages[slideIndex - 1].classList.add('block');
         }
