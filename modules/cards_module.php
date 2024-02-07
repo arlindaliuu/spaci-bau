@@ -1,24 +1,21 @@
 <?php
-$category = isset($atts['category']) ? $atts['category'] : '';
-$title = isset($atts['title']) ? $atts['title'] : 'Unsere Produkte';
 
-// Query all products
-$args = array(
-    'post_type' => 'product',
-    'posts_per_page' => -1,
-    'meta_key'       => 'unique_baulemente_post_views_count',
-    'orderby'        => 'meta_value_num',
-    'order'          => 'DESC'
-);
-  if (!empty($category)) {
-    $args['tax_query'] = array(
-        array(
-            'taxonomy' => 'product_category', // Replace with your actual taxonomy name
-            'field' => 'slug',
-            'terms' => $category,
-        ),
-    );
-  }
+$modules = get_field('field_1', get_the_ID()); 
+    for( $i = 0; $i < count($modules); $i++){
+        if($modules[$i]['acf_fc_layout'] == "cards_module"){
+            $data = $modules[$i];
+        }
+    }
+  $taxonomy = $data['category'] ? $data['category'] : '';
+  $title = $data['card_title'];
+  $post_type = $data['post_type'];
+  
+  // Query all products
+  $args = array(
+      'post_type' => $post_type,
+      'posts_per_page' => -1,
+  );
+  
   $products_query = new WP_Query($args);
   ?>
     <div class="wrapper-carousel flex justify-center items-center relative flex-wrap">

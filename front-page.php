@@ -10,7 +10,7 @@
 <?php 
   $modules = get_field('field_1', get_the_ID()); 
   
-  for( $i = 0; $i < count($modules) - 1; $i++){
+  for( $i = 0; $i < count($modules); $i++){
     getModules($modules[$i]['acf_fc_layout']);
   }
    ?>
@@ -18,7 +18,6 @@
 
 
 <?php get_template_part('components/services'); ?>
-<?php echo do_shortcode('[carousel title="Unsere Produkte"]') ?>
 
 <?php get_template_part('components/map'); ?>
 <?php get_template_part('components/whatsapp-button'); ?>
