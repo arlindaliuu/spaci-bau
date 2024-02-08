@@ -58,9 +58,20 @@ function add_custom_flexible_content_field() {
                                     'label' => 'Post Type',
                                     'name' => 'post_type',
                                     'type' => 'select', // Select field for choosing post type
+                                    'default'=> 'page',
                                     'choices' => array('member' => 'Member', 'product' => 'Product', 'post' => 'Post', 'page' => 'Page'),
                                     'wrapper' => array(
-                                        'width' => '50%', // Set the width to 50%
+                                        'width' => '40%', // Set the width to 50%
+                                    ),
+                                ),
+                                array(
+                                    'key' => 'field_category_all',
+                                    'label' => 'Select All Categories',
+                                    'name' => 'category_all',
+                                    'type' => 'true_false', // Use true/false field for on/off option
+                                    'default_value' => 1, // Default value is true (checked)
+                                    'wrapper' => array(
+                                        'width' => '20%', // Set the width to 50%
                                     ),
                                 ),
                                 array(
@@ -69,8 +80,17 @@ function add_custom_flexible_content_field() {
                                     'name' => 'category',
                                     'type' => 'select', // Select field for choosing category
                                     'choices' => array(), // Leave empty for now
+                                    'conditional_logic' => array(
+                                        array(
+                                            array(
+                                                'field' => 'field_category_all',
+                                                'operator' => '==',
+                                                'value' => '0', // Only show this field if field_category_all is set to false
+                                            ),
+                                        ),
+                                    ),
                                     'wrapper' => array(
-                                        'width' => '50%', // Set the width to 50%
+                                        'width' => '40%', // Set the width to 50%
                                     ),
                                 ),
                                 array(
@@ -80,6 +100,68 @@ function add_custom_flexible_content_field() {
                                     'type' => 'text', // Text field for entering card title
                                     'wrapper' => array(
                                         'width' => '50%', // Set the width to 50%
+                                    ),
+                                ),
+                            ),
+                        ),
+                        array(
+                            'name' => 'service_module',
+                            'label' => 'Services',
+                            'sub_fields' => array(
+                                array(
+                                    'key' => 'field_service_main_title', // Service Main Title field
+                                    'label' => 'Service Main Title',
+                                    'name' => 'service_main_title',
+                                    'type' => 'text',
+                                    'wrapper' => array(
+                                        'width' => '50%', 
+                                    ),
+                                ),
+                                array(
+                                    'key' => 'field_service_main_content', // Service Main Content field
+                                    'label' => 'Service Main Content',
+                                    'name' => 'service_main_content',
+                                    'type' => 'wysiwyg',
+                                    'wrapper' => array(
+                                        'width' => '50%', 
+                                    ),
+                                ),
+                                array(
+                                    'key' => 'field_services', // Repeater field for slider images
+                                    'label' => 'Services',
+                                    'name' => 'services',
+                                    'type' => 'repeater',
+                                    'min' => 1, // Minimum rows allowed (optional)
+                                    'layout' => 'block', // Set layout to 'block' for a more visually appealing display
+                                    'button_label' => 'Add Services', 
+                                    'sub_fields' => array(
+                                        array(
+                                            'key' => 'field_service_title45123',
+                                            'label' => 'Single Service Title',
+                                            'name' => 'single_service_title',
+                                            'type' => 'text',
+                                            'wrapper' => array(
+                                                'width' => '50%', 
+                                            ),
+                                        ),
+                                        array(
+                                            'key' => 'field_service_image192', 
+                                            'label' => 'Single Service Image',
+                                            'name' => 'single_service_image',
+                                            'type' => 'image',
+                                            'wrapper' => array(
+                                                'width' => '50%',
+                                            ),
+                                        ),
+                                        array(
+                                            'key' => 'field_service_content223', 
+                                            'label' => 'Single Service Content',
+                                            'name' => 'single_service_content',
+                                            'type' => 'wysiwyg',
+                                            'wrapper' => array(
+                                                'width' => '100%',
+                                            ),
+                                        ),
                                     ),
                                 ),
                             ),
@@ -172,7 +254,7 @@ function get_categories_for_post_type() {
         $options = '';
         foreach ($categories as $category) {
             $isSelected = ($category->term_id == $selectedCategory) ? 'selected' : ''; // Check if category is selected
-            $options .= '<option value="' . $category->term_id . '" ' . $isSelected . '>' . $category->name . '</option>';
+            $options .= '<option value="' . $category->name . '" ' . $isSelected . '>' . $category->name . '</option>';
         }
 
         // Output the options as a string

@@ -17,7 +17,7 @@
 
 
 
-<?php get_template_part('components/services'); ?>
+<?php get_template_part('modules/services_module'); ?>
 
 <?php get_template_part('components/map'); ?>
 <?php get_template_part('components/whatsapp-button'); ?>
