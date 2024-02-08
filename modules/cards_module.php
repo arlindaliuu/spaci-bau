@@ -9,13 +9,35 @@ $modules = get_field('field_1', get_the_ID());
   $taxonomy = $data['category'] ? $data['category'] : '';
   $title = $data['card_title'];
   $post_type = $data['post_type'];
-  
+  $allCategoriesSelected = $data['category_all'];
   // Query all products
-  $args = array(
+  // Initialize $args array
+    $args = array(
       'post_type' => $post_type,
       'posts_per_page' => -1,
-  );
-  
+    );
+
+    if(!$allCategoriesSelected){
+      // Conditionally add tax_query for 'product' post type
+      if ($post_type === 'product') {
+        $args['tax_query'] = array(
+            array(
+                'taxonomy' => 'product_category',
+                'field'    => 'name',
+                'terms'    => $taxonomy,
+            ),
+        );
+      }else{
+        $args['tax_query'] = array(
+          array(
+              'taxonomy' => 'category',
+              'field'    => 'name',
+              'terms'    => $taxonomy,
+          ),
+        );
+      }
+    }
+   
   $products_query = new WP_Query($args);
   ?>
     <div class="wrapper-carousel flex justify-center items-center relative flex-wrap">
