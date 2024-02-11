@@ -39,6 +39,11 @@
   font-display: swap;
 }
 
+#slider-wrapper{
+  h1{
+    font-size: 40px;
+  }
+}
 /* Apply the font to your desired elements */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
@@ -274,4 +279,7 @@ select::-webkit-scrollbar-thumb:active {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+h1{
+  font-size: 40px !important;
 }

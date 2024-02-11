@@ -6,7 +6,7 @@ window.addEventListener("load", function(){
     let slideIndex = 1;
 
     function changeSlider(index){
-        let sliderImages = document.getElementsByClassName('slider_images');
+        let sliderImages = document.getElementsByClassName('slider_data');
         if(sliderImages.length > 0){
             if( index > sliderImages.length ){
                 slideIndex = 1;
