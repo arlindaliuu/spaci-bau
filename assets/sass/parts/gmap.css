@@ -1,0 +1,15 @@
+.gt_float_switcher {
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1px 1px;
+}
+.gt_float_switcher img {
+  width: 20px !important;
+  height: 20px !important;
+}
+.gt_float_switcher .gt-lang-code, .gt_float_switcher .gt-open {
+  font-size: 16px;
+  font-weight: 700;
+  color: #172647;
+  font-family: "Roboto";
+}/*# sourceMappingURL=gmap.css.map */

@@ -19,9 +19,9 @@ function add_custom_flexible_content_field() {
                             'label' => 'Slider',
                             'sub_fields' => array(
                                 array(
-                                    'key' => 'field_slider_images', // Repeater field for slider images
+                                    'key' => 'field_slider_data', // Repeater field for slider images
                                     'label' => 'Slider Images',
-                                    'name' => 'slider_images',
+                                    'name' => 'slider_data',
                                     'type' => 'repeater',
                                     'min' => 1, // Minimum rows allowed (optional)
                                     'layout' => 'block', // Set layout to 'block' for a more visually appealing display
@@ -44,7 +44,81 @@ function add_custom_flexible_content_field() {
                                             'wrapper' => array(
                                                 'width' => '50%', // Set the width to 50%
                                             ),
-                                        )
+                                        ),
+                                        array(
+                                            'key' => 'field_slider_text_container',
+                                            'label' => 'Show container',
+                                            'name' => 'text_container',
+                                            'type' => 'true_false', 
+                                            'choices' => array(
+                                                1 => 'Show container', 
+                                            ),
+                                            'default_value' => 0, 
+                                            'layout' => 'horizontal',
+                                            'wrapper' => array(
+                                                'width' => '33%', 
+                                            ),
+                                        ),
+                                        array(
+                                            'key' => 'field_slider_text_tab',
+                                            'label' => 'Place Container in:',
+                                            'name' => 'container_position',
+                                            'type' => 'button_group', // Use button_group field type
+                                            'choices' => array(
+                                                'left' => 'Left',
+                                                'middle' => 'Middle',
+                                                'right' => 'Right',
+                                            ),
+                                            'conditional_logic' => array(
+                                                array(
+                                                    array(
+                                                        'field' => 'field_slider_text_container',
+                                                        'operator' => '==',
+                                                        'value' => '1', 
+                                                    ),
+                                                ),
+                                            ),
+                                            'wrapper' => array(
+                                                'width' => '33%',
+                                            ),
+                                        ),
+                                        array(
+                                            'key' => 'field_slider_container_color',
+                                            'label' => 'Container Background Color',
+                                            'name' => 'container_bg_color',
+                                            'type' => 'color_picker',
+                                            'return_format' => 'rgba',
+                                            'conditional_logic' => array(
+                                                array(
+                                                    array(
+                                                        'field' => 'field_slider_text_container',
+                                                        'operator' => '==',
+                                                        'value' => '1', 
+                                                    ),
+                                                ),
+                                            ),
+                                            'wrapper' => array(
+                                                'width' => '33%', 
+                                            ),
+                                        ),
+                                        array(
+                                            'key' => 'field_slider_text_editor',
+                                            'label' => 'Container text',
+                                            'name' => 'container_text',
+                                            'type' => 'wysiwyg',
+                                            'conditional_logic' => array(
+                                                array(
+                                                    array(
+                                                        'field' => 'field_slider_text_container',
+                                                        'operator' => '==',
+                                                        'value' => '1', 
+                                                    ),
+                                                ),
+                                            ),
+                                            'wrapper' => array(
+                                                'width' => '100%', 
+                                            ),
+                                        ),
                                     ),
                                 ),
                             ),
@@ -61,7 +135,7 @@ function add_custom_flexible_content_field() {
                                     'default'=> 'page',
                                     'choices' => array('member' => 'Member', 'product' => 'Product', 'post' => 'Post', 'page' => 'Page'),
                                     'wrapper' => array(
-                                        'width' => '40%', // Set the width to 50%
+                                        'width' => '40%', 
                                     ),
                                 ),
                                 array(
@@ -71,35 +145,35 @@ function add_custom_flexible_content_field() {
                                     'type' => 'true_false', // Use true/false field for on/off option
                                     'default_value' => 1, // Default value is true (checked)
                                     'wrapper' => array(
-                                        'width' => '20%', // Set the width to 50%
+                                        'width' => '20%',
                                     ),
                                 ),
                                 array(
                                     'key' => 'field_category',
                                     'label' => 'Category',
                                     'name' => 'category',
-                                    'type' => 'select', // Select field for choosing category
-                                    'choices' => array(), // Leave empty for now
+                                    'type' => 'select', 
+                                    'choices' => array(),
                                     'conditional_logic' => array(
                                         array(
                                             array(
                                                 'field' => 'field_category_all',
                                                 'operator' => '==',
-                                                'value' => '0', // Only show this field if field_category_all is set to false
+                                                'value' => '0', 
                                             ),
                                         ),
                                     ),
                                     'wrapper' => array(
-                                        'width' => '40%', // Set the width to 50%
+                                        'width' => '40%', 
                                     ),
                                 ),
                                 array(
                                     'key' => 'field_card_title',
                                     'label' => 'Card Title',
                                     'name' => 'card_title',
-                                    'type' => 'text', // Text field for entering card title
+                                    'type' => 'text',
                                     'wrapper' => array(
-                                        'width' => '50%', // Set the width to 50%
+                                        'width' => '50%', 
                                     ),
                                 ),
                             ),
@@ -270,3 +344,4 @@ add_action('wp_ajax_get_categories_for_post_type', 'get_categories_for_post_type
 add_action('wp_ajax_nopriv_get_categories_for_post_type', 'get_categories_for_post_type');
 
 ?>
+
