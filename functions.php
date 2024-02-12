@@ -13,7 +13,7 @@ function unique_baulemente_theme_enqueue_scripts() {
   // Tailwind custom style
   wp_enqueue_style( 'tailwind-custom-styles', get_stylesheet_directory_uri() . '/assets/dist/output.css', array(), '1.2.2' );
   // Sass custom style
-  wp_enqueue_style( 'sass-custom-styles', get_stylesheet_directory_uri() . '/assets/dist/style.css', array(), '1.2.2' );
+  wp_enqueue_style( 'sass-custom-styles', get_stylesheet_directory_uri() . '/assets/dist/style.css', array(), '1.1.2' );
   // Enqueue custom script
   wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/assets/js/header.js', array( 'jquery' ), '1.1.0', false );
   wp_enqueue_script( 'custom-modal-script', get_stylesheet_directory_uri() . '/assets/js/modal.js', array( 'jquery' ), '1.1.0', false );

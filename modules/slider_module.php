@@ -9,19 +9,22 @@
 ?>
     <!--- Section Slider ---->
     <section>
-        <div id="slider-wrapper" class="slider-wrapper relative z-30">
+        <div id="slider-wrapper" class="slider-wrapper relative z-30 -mt-[70px]">
             <?php 
             for($i = 0; $i < count($data['slider_data']); $i++){ 
                     $isContainer = $data['slider_data'][$i]['text_container'];
                     $sliderPosition = $data['slider_data'][$i]['container_position'];
                     $sliderContainerText= $data['slider_data'][$i]['container_text'];
-                    $containerColor = $data['slider_data'][$i]['container_bg_color'];
+                    //This variable will be available next version ( 2.0 and above )
+                    // $containerColor = $data['slider_data'][$i]['container_bg_color'];
                 ?>
                 <div class="slider_data first:block hidden duration-300 animate-fade-left">
                     <img src="<?= $data['slider_data'][$i]['slider_image']['url'] ?>" class="max-h-[800px] min-h-[800px] w-full object-cover" alt="<?= $data['slider_data'][$i]['image_name'] ?>" />
                     <?php if ($isContainer) : ?>
-                        <div style="background-color:<?= $containerColor ?>;" class='min-w-[30%] max-w-[30%] max-h-[50%] absolute top-1/2 -translate-x-1/2 -translate-y-1/2 <?= $sliderPosition === 'left' ? 'left-1/3' : ($sliderPosition === 'middle' ? 'left-1/2' : 'left-[66%]') ?> bg-green-700/50 p-6'>
-                            <?= $sliderContainerText ?>
+                        <div class='min-w-[30%] lg:max-w-[30%] w-full lg:w-min max-h-[50%] absolute top-1/2 lg:-translate-x-1/2 -translate-y-1/2 <?= $sliderPosition === 'left' ? 'lg:left-1/3' : ($sliderPosition === 'middle' ? 'lg:left-1/2' : 'lg:left-[66%]') ?> bg-neutral-500/50 p-6'>
+                            <div class="p-6 bg-neutral-500/60 text-white">
+                                <?= $sliderContainerText ?>
+                            </div>
                         </div>
                     <?php endif; ?>
                 </div>

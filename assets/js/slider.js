@@ -3,6 +3,7 @@ window.addEventListener("load", function(){
     const prevButton = document.getElementById("prev-button");
     const nextButton = document.getElementById("next-button");
     let startX, endX; // Variables to store touch start and end positions
+    let isMouseDown = false;
     let slideIndex = 1;
 
     function changeSlider(index){
@@ -28,17 +29,20 @@ window.addEventListener("load", function(){
     function handleSlideChange(delta){
         changeSlider(slideIndex += delta);
     }
+
     if(prevButton){
         prevButton.addEventListener("click", function(){
             handleSlideChange(-1);
         });
     }
+
     if(nextButton){
         nextButton.addEventListener("click", function(){
             handleSlideChange(1);
         });
     }
-    // Touch} event listeners for swiping
+
+    // Touch event listeners for swiping
     if(sliderWrapper){
         sliderWrapper.addEventListener("touchstart", function(event) {
             startX = event.touches[0].clientX;
@@ -55,6 +59,33 @@ window.addEventListener("load", function(){
                 handleSlideChange(1);
             }
         });
+
+        // Desktop swipe event listeners
+        sliderWrapper.addEventListener("mousedown", function(event) {
+            startX = event.clientX;
+            isMouseDown = true;
+        });
+
+        sliderWrapper.addEventListener("mousemove", function(event) {
+            if (isMouseDown) {
+                endX = event.clientX;
+                let deltaX = startX - endX;
+                if (deltaX > 50) {
+                    // Swiped left
+                    handleSlideChange(-1);
+                    isMouseDown = false;
+                } else if (deltaX < -50) {
+                    // Swiped right
+                    handleSlideChange(1);
+                    isMouseDown = false;
+                }
+            }
+        });
+
+        sliderWrapper.addEventListener("mouseup", function(event) {
+            isMouseDown = false;
+        });
     }
+
     changeSlider(slideIndex);
 });

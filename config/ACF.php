@@ -85,6 +85,7 @@ function add_custom_flexible_content_field() {
                                         array(
                                             'key' => 'field_slider_container_color',
                                             'label' => 'Container Background Color',
+                                            'instructions' => "This option is not available yet.",
                                             'name' => 'container_bg_color',
                                             'type' => 'color_picker',
                                             'return_format' => 'rgba',

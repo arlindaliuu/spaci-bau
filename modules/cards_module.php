@@ -40,10 +40,10 @@ $modules = get_field('field_1', get_the_ID());
    
   $products_query = new WP_Query($args);
   ?>
-    <div class="wrapper-carousel flex justify-center items-center relative flex-wrap">
+    <div class="wrapper-carousel flex justify-center items-center relative flex-wrap flex-col">
       <div class="carousel-bg absolute xl:block hidden right-0 top-0 h-full w-1/4 z-10"></div>
       <div class="carousel pt-20">
-        <p class="text-xl lg:text-4xl font-semibold text-white mb-10 px-10 lg:px-0 lg:text-left text-center"><?= $title ?> <hr class="w-full lg:w-2/12 h-2 border-solid border-t-4 border-orange-600"/></p>
+        <p class="text-xl lg:text-4xl font-semibold text-white mb-10 px-10 lg:px-0 lg:text-left text-center"><?= $title ?> <hr class="w-full lg:w-2/12 h-2 border-solid border-t-4 border-yellow-600"/></p>
         <div class="carousel-wrapper p-6 gap-x-4">
           <?php
           if ($products_query->have_posts()) {

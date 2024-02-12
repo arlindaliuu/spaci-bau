@@ -5,8 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#ff7523"/>
-<meta name="description" content="Willkommen bei UNIQUE Baulemente. Wir bieten maßgeschneiderte Türinstallationen, Fensteraustausch und Reparatur, Tür- und Fensterwartung, Sicherheitslösungen, Spezialtüren und -fenster sowie Beratung und Designservices. Entdecken Sie hochwertige Lösungen für Ihre Türen und Fensterbedürfnisse. Kontaktieren Sie uns noch heute für eine individuelle Beratung!">
+<meta name="description" content="Willkommen bei Spaci Bau. Wir bieten maßgeschneiderte Türinstallationen, Fensteraustausch und Reparatur, Tür- und Fensterwartung, Sicherheitslösungen, Spezialtüren und -fenster sowie Beratung und Designservices. Entdecken Sie hochwertige Lösungen für Ihre Türen und Fensterbedürfnisse. Kontaktieren Sie uns noch heute für eine individuelle Beratung!">
 <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/manifest.json">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <?php wp_head(); ?>
 </head>
@@ -14,9 +15,9 @@
 <?php
       $logo_url = get_field('logo', 'option');
 ?>
-<header id="main-header" class="z-30 animate-fade-down w-full">
-  <div class="header min-h-[70px] lg:max-h-[90px] w-full grid lg:grid-cols-2 bg-white shadow-lg z-10 relative">
-    <div class="sticky sticky__header bg-orange-500 lg:bg-none">
+<header id="main-header" class="z-40 w-full">
+  <div class="header min-h-[70px] lg:max-h-[90px] w-full grid lg:grid-cols-2 bg-white lg:bg-transparent shadow-lg z-40 relative backdrop-blur-2xl">
+    <div class="sticky sticky__header bg-yellow-500 lg:bg-none">
       <a class="lg:pl-6 lg:pt-6 p-4 pl-0 block w-9/12" href="/">
         <img src="<?= $logo_url; ?>" alt="Logo" class="max-h-[50px] max-w-[240px] object-contain" width="240" height="50" />
       </a>
@@ -41,7 +42,7 @@
     class Custom_Nav_Walker extends Walker_Nav_Menu {
       // Add the dropdown toggle for menu items that have children
       function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
-        $output .= '<li class="relative group m-2 mx-4 ';
+        $output .= '<li class="relative group m-2 mx-4';
     
         // Check if the menu item has children
         $has_children = !empty($item->classes) && in_array('menu-item-has-children', $item->classes);
@@ -122,8 +123,8 @@
     $whatsapp = get_field('whats_app', 'option');
 
     ?>
-    <div class="lg:border-l-2 my-2 p-2 flex justify-center items-center lg:border-l-orange-100">
-      <a href="tel:<?= urlencode($whatsapp['number']) ?>" class="text-center bg-orange-100 mx-2 shadow-lg border rounded-full px-6 hover:scale-110 hover:shadow-2xl py-2 text-white duration-200">Jetzt anrufen!</a>
+    <div class="lg:border-l-2 my-2 p-2 flex justify-center items-center lg:border-l-yellow-500">
+      <a href="tel:<?= urlencode($whatsapp['number']) ?>" class="uppercase font-bold text-center bg-yellow-500 mx-2 shadow-lg border px-3 hover:scale-110 hover:shadow-2xl py-2 text-white duration-200">Jetzt anrufen!</a>
     </div>
     </div>
   </div>

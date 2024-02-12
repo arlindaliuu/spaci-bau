@@ -139,15 +139,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //Sticky header
 window.addEventListener('scroll', function() {
-  var header = document.getElementById('main-header');
-  var headerHeight = header.offsetHeight;
-
-  if (window.pageYOffset > headerHeight) {
-    header.classList.add('fixed', 'top-0', 'animate-fade-down');
-    document.body.style.paddingTop = headerHeight + 'px';
-  } else {
-    header.classList.remove('fixed', 'top-0', 'animate-fade-down');
-    document.body.style.paddingTop = 0;
+  if(this.window.innerWidth < 1024){
+    var header = document.getElementById('main-header');
+    var headerHeight = header.offsetHeight;
+  
+    if (window.pageYOffset > headerHeight) {
+      header.classList.add('fixed', 'top-0', 'animate-fade-down');
+      document.body.style.paddingTop = headerHeight + 'px';
+    } else {
+      header.classList.remove('fixed', 'top-0', 'animate-fade-down');
+      document.body.style.paddingTop = 0;
+    }
   }
 });
 

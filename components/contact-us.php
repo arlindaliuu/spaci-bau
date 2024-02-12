@@ -5,6 +5,6 @@
         <p class="text-blue-50 md:text-white p-10 md:p-24 md:pt-6 font-normal text-lg md:text-xl">Wir schätzen Ihr Feedback und freuen uns immer, von Ihnen zu hören. Egal, ob Sie eine Frage oder einen Vorschlag haben oder einfach nur Hallo sagen möchten, wir sind für Sie da. Bitte kontaktieren Sie uns!</p>
     </div>
     <div class="col-span-2" >
-        <?php echo do_shortcode('[contact-form-7 id="29" title="Contact form 1"]'); ?>
+        <?php echo do_shortcode('[contact-form-7 id="b3d6354" title="Contact form 1"]'); ?>
     </div>
 </div>

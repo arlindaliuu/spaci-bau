@@ -3,19 +3,6 @@
         .sticky__header{
             background-color: unset;
         }
-    position: relative;
-    &::before{
-        content: "";
-        width: 50%;
-        height: 102px;
-        background: #0077b6;
-        position: absolute;
-        top: 0px;
-        left: -273px;
-        z-index: 0;
-        -webkit-transform: skewX(-45deg);
-        transform: skewX(-45deg);
-    }
 }
     .menu{
         @media only screen and (max-width: 1024px) {
@@ -23,8 +10,9 @@
           }
           font-weight: 700;
           color: #172647;
-        display: flex;
+          display: flex;
         a {
+            text-transform: uppercase;
             position: relative;
             text-decoration: none;
         }
@@ -36,7 +24,7 @@
             height: 3px;
             top: 100%;
             left: 0;
-            background: #ff7000;
+            background: #eab308;
             transition: transform 0.5s;
             transform: scaleX(0);
             transform-origin: left;

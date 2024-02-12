@@ -8,7 +8,7 @@ for( $i = 0; $i < count($modules); $i++){
 ?>
 <!-- Section: Services -->
 <section class="bg-gray-100">
-    <div class="targetDiv animate-duration-[3000ms] min-h-[900px] max-w-mdm m-auto py-20 xl:px-0 px-10">
+    <div class="targetDiv animate-duration-[3000ms] max-w-mdm m-auto py-20 xl:px-0 px-10">
         <div>
             <h1 class="text-3xl lg:text-4xl font-semibold text-blue-50"><?= $data['service_main_title']; ?></h1>
         <div>
@@ -26,7 +26,7 @@ for( $i = 0; $i < count($modules); $i++){
                         <div class="grid">
                             <h1 class="text-xl text-blue-50 font-bold"><?= $service["single_service_title"] ?></h1>
                             <p class="mt-2 text-black-700 text-md"><?= $service["single_service_content"] ?></p>
-                            <a href="/dienstleistungen" class="text-orange-500 cursor-pointer hover:underline self-end">Weiterlesen &#x21b7;</a>
+                            <a href="/dienstleistungen" class="text-yellow-500 font-bold cursor-pointer hover:underline self-end">Weiterlesen &#x21b7;</a>
                         </div>
                     <?php
                     if($service["single_service_image"]){ ?>
