@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Products
+ * Template Name: Projects
  */
 get_header();
 
@@ -15,9 +15,9 @@ get_header();
 <?php
 $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 
-// Query all products
+// Query all projects
 $args = array(
-    'post_type' => 'product',
+    'post_type' => 'project',
     'posts_per_page' => 9,
     'paged' => $paged,
     
@@ -27,7 +27,7 @@ $args = array(
 if (isset($_GET['category']) && !empty($_GET['category'])) {
     $args['tax_query'] = array(
         array(
-            'taxonomy' => 'product_category',
+            'taxonomy' => 'project_category',
             'field' => 'slug',
             'terms' => sanitize_text_field($_GET['category']),
         ),
@@ -38,7 +38,7 @@ $products_query = new WP_Query($args);
 
 // Get all product categories
 $product_categories = get_terms(array(
-    'taxonomy' => 'product_category',
+    'taxonomy' => 'project_category',
     'hide_empty' => true,
 ));
 ?>
@@ -46,7 +46,7 @@ $product_categories = get_terms(array(
     <div class="col-span-2">
         <div class="parallax parallax-products">
             <div class="parallax-content bg-black-700 w-96 top-1/2 bg-opacity-75 p-6">
-                <p class="text-3xl text-white font-bold capitalize"><?php if(empty($_GET['category'])){ echo 'Alle UNIQUE Baulemente Produkte'; } else{ echo $_GET['category']; } ?></p>
+                <p class="text-3xl text-white font-bold capitalize"><?php if(empty($_GET['category'])){ echo 'Alle Spaci Bau Projekteaa'; } else{ echo $_GET['category']; } ?></p>
                 <?php custom_breadcrumbs("text-white") ?>
             </div>
         </div>
@@ -82,7 +82,7 @@ $product_categories = get_terms(array(
             if ($products_query->have_posts()) { 
                 while ($products_query->have_posts()) {
                     $products_query->the_post();
-                    $product_categories = get_the_terms(get_the_ID(), 'product_category');
+                    $product_categories = get_the_terms(get_the_ID(), 'project_category');
                     $product_category_slugs = array();
                     if ($product_categories) {
                         foreach ($product_categories as $category) {

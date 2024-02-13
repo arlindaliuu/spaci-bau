@@ -17,7 +17,7 @@ get_header(); ?>
         $category = $urlParts[$categoryIndex + 1];
         echo urldecode($category);
     } else {
-        echo 'Alle UNIQUE Baulemente Produkte';
+        echo 'Alle Spaci Bau Projekte';
     }
     ?>
 </p>

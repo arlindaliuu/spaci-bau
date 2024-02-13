@@ -315,3 +315,14 @@ select::-webkit-scrollbar-thumb:active {
   background: #020629;
   color: white;
 }
+.sub-title:before {
+    content: "";
+    display: inline-block;
+    margin-right: 12px;
+    border-width: 5px;
+    border-style: solid;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: #eab308;
+    border-right-color: #eab308;
+}

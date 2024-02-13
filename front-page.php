@@ -17,9 +17,9 @@
 
 
 
-<?php get_template_part('modules/services_module'); ?>
-
+<?php get_template_part('components/who-we-are'); ?>
 <?php get_template_part('components/map'); ?>
+<?php get_template_part('components/contact-us'); ?>
 <?php get_template_part('components/whatsapp-button'); ?>
 <?php
       $shortcode_content = get_field('page_content', get_the_ID());

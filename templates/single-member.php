@@ -17,7 +17,7 @@ get_header(); ?>
                 the_post();
                 ?>
                 <div class="max-h-[400px] relative"> 
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/single-article-banner.webp" alt="Single product banner" class="opacity-75 max-h-[400px] w-full object-cover" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/single-article-banner.webp" alt="Single project banner" class="opacity-75 max-h-[400px] w-full object-cover" />
                     <h1 class="absolute top-1/3 -translate-x-1/2 left-1/2 text-white text-4xl "><?php the_title();?> </h1>
                     <p><?php custom_breadcrumbs("absolute top-1/2 w-full text-center -translate-x-1/2 left-1/2 text-lg text-white") ?></p>
                 </div>
@@ -38,7 +38,7 @@ get_header(); ?>
                 get_template_part('/components/carousel-members');
             }
         } else {
-            echo 'Product not found.';
+            echo 'Project not found.';
         }
     ?>
 <?php get_footer(); ?>

@@ -26,7 +26,7 @@ for( $i = 0; $i < count($modules); $i++){
                         <div class="grid">
                             <h1 class="text-xl text-blue-50 font-bold"><?= $service["single_service_title"] ?></h1>
                             <p class="mt-2 text-black-700 text-md"><?= $service["single_service_content"] ?></p>
-                            <a href="/dienstleistungen" class="text-yellow-500 font-bold cursor-pointer hover:underline self-end">Weiterlesen &#x21b7;</a>
+                            <a href="/dienstleistungen" class="text-red-950 font-bold cursor-pointer hover:underline self-end">Weiterlesen &#x21b7;</a>
                         </div>
                     <?php
                     if($service["single_service_image"]){ ?>

@@ -134,7 +134,7 @@ function add_custom_flexible_content_field() {
                                     'name' => 'post_type',
                                     'type' => 'select', // Select field for choosing post type
                                     'default'=> 'page',
-                                    'choices' => array('member' => 'Member', 'product' => 'Product', 'post' => 'Post', 'page' => 'Page'),
+                                    'choices' => array('member' => 'Member', 'project' => 'Project', 'post' => 'Post', 'page' => 'Page'),
                                     'wrapper' => array(
                                         'width' => '40%', 
                                     ),
@@ -317,7 +317,7 @@ function get_categories_for_post_type() {
 
     if (!empty($postType)) {
         // Define the taxonomy name based on the selected post type
-        $taxonomy = ($postType == 'product') ? 'product_category' : 'category';
+        $taxonomy = ($postType == 'project') ? 'project_category' : 'category';
 
         // Fetch categories for the selected post type
         $categories = get_categories(array(

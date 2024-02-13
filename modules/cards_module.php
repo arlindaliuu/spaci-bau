@@ -10,7 +10,7 @@ $modules = get_field('field_1', get_the_ID());
   $title = $data['card_title'];
   $post_type = $data['post_type'];
   $allCategoriesSelected = $data['category_all'];
-  // Query all products
+  // Query all projects
   // Initialize $args array
     $args = array(
       'post_type' => $post_type,
@@ -18,11 +18,11 @@ $modules = get_field('field_1', get_the_ID());
     );
 
     if(!$allCategoriesSelected){
-      // Conditionally add tax_query for 'product' post type
-      if ($post_type === 'product') {
+      // Conditionally add tax_query for 'project' post type
+      if ($post_type === 'project') {
         $args['tax_query'] = array(
             array(
-                'taxonomy' => 'product_category',
+                'taxonomy' => 'project_category',
                 'field'    => 'name',
                 'terms'    => $taxonomy,
             ),
@@ -49,7 +49,7 @@ $modules = get_field('field_1', get_the_ID());
           if ($products_query->have_posts()) {
             while ($products_query->have_posts()) {
               $products_query->the_post();
-              $product_categories = get_the_terms(get_the_ID(), 'product_category');
+              $product_categories = get_the_terms(get_the_ID(), 'project_category');
               $product_category_slugs = array();
               if ($product_categories) {
                 foreach ($product_categories as $category) {
@@ -66,7 +66,7 @@ $modules = get_field('field_1', get_the_ID());
                     <h2 class="text-lg lg:text-xl font-bold mb-2 title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                     <p class="text-gray-700 mb-4 text-base content-card"><?php echo get_the_excerpt(); ?></p>
                   </div>
-                  <a href="<?php the_permalink(); ?>" class="w-full self-end px-4 py-2 bg-orange-100 text-white block text-center rounded-lg hover:bg-blue-50 duration-300 hover:scale-105">
+                  <a href="<?php the_permalink(); ?>" class="w-full self-end px-4 py-2 bg-yellow-500 text-black font-bold block text-center rounded-lg hover:bg-blue-50 hover:text-white duration-300 hover:scale-105">
                     Weiterlesen
                   </a>
                 </article>

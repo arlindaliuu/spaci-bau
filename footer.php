@@ -2,9 +2,9 @@
       $logo_url = get_field('logo', 'option');
       $data = get_field('whats_app', 'option'); 
 ?>
-<footer class="bg-black-800 text-white pt-8">
+<footer class="bg-[#232323] text-white pt-8">
    <div class="w-full grid lg:grid-cols-3 pb-10 container mx-auto">
-        <div class="lg:border-r lg:border-r-orange-100 flex p-2 lg:justify-center items-center py-6">
+        <div class="lg:border-r lg:border-r-yellow-500 flex p-2 lg:justify-center items-center py-6">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/email.webp" alt="Logo" class="h-8 w-10 object-contain  animate-duration-[3000ms]" />
             <p class="ml-3">Schreiben Sie uns eine E-Mail :
             <?= $data['email']; ?>
@@ -16,7 +16,7 @@
             <?= $data['number']; ?>
         </p>
         </div>
-        <div class="lg:border-l lg:border-l-orange-100  flex p-2 lg:justify-center items-center py-6">
+        <div class="lg:border-l lg:border-yellow-500   flex p-2 lg:justify-center items-center py-6">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/placeholder.webp" alt="Logo" class="h-8 w-10 object-contain" />
             <p class="ml-3">
                 <?= $data['adress']; ?>
@@ -24,7 +24,7 @@
         </div>
     </div>
             <div class="container mx-auto px-4">
-                <div class="flex justify-between gap-4 flex-wrap lg:flex-nowrap">
+                <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
                     <div class="w-full mb-8 md:mb-0 order-4 md:order-1">
                         <h1 class="text-xl mb-4">Finde uns</h1>
                         <ul class="flex">
@@ -83,7 +83,7 @@
                     <?php endif; ?>
                     <?php if ( has_nav_menu( 'footer-menu-2' ) ) : ?>
                         <div class="w-full mb-8 md:mb-0 order-3">
-                            <h1 class="text-xl mb-4">Produkte</h1>
+                            <h1 class="text-xl mb-4">Projekte</h1>
                             <?php
                             wp_nav_menu(
                                 array(
@@ -96,13 +96,13 @@
                         </div>
                     <?php endif; ?>
                     <div class="mb-8 md:mb-0 order-1 md:order-4">
-                        <h1 class="text-xl mb-4">Am häufigsten angesehenes Produkt</h1>
+                        <h1 class="text-xl mb-4">Am häufigsten angesehenes Projekt</h1>
                         <?php
                         // Query to get the most viewed post
                         $args = array(
-                            'post_type'      => 'product',
+                            'post_type'      => 'project',
                             'posts_per_page' => 1,
-                            'meta_key'       => 'unique_baulemente_post_views_count',
+                            'meta_key'       => 'aa_post_views_count',
                             'orderby'        => 'meta_value_num',
                             'order'          => 'DESC'
                         );
@@ -114,7 +114,7 @@
                                 $most_viewed_query->the_post();
                                 $post_id = get_the_ID();
                                 $post_title = get_the_title();
-                                $post_view_count = unique_baulemente_get_views_post_count($post_id);
+                                $post_view_count = aa_get_views_post_count($post_id);
                                 ?>
                                 <article id="post-<?php the_ID(); ?>" <?php post_class('bg-white rounded shadow flex gap-2 min-w-[100px] min-h-[100px] justify-between p-2'); ?>>
                                 <?php if (has_post_thumbnail()) {
@@ -123,7 +123,7 @@
                                 <div>
                                     <h2 class="text-lg font-bold text-blue-50 mb-2"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                                     <p class="text-blue-50 mb-4 text-sm"><?php echo wp_trim_words(get_the_excerpt(), 7); ?></p>
-                                    <a href="<?php the_permalink(); ?>" class="px-3 py-1 bg-orange-100 text-white block text-sm text-center rounded-lg hover:bg-blue-50 duration-300 hover:scale-105">
+                                    <a href="<?php the_permalink(); ?>" class="px-3 py-1 bg-yellow-600 text-black block text-sm text-center rounded-lg hover:text-white hover:bg-blue-50 duration-300 hover:scale-105">
                                     Weiterlesen
                                 </a>
                                 </div>

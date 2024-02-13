@@ -9,7 +9,7 @@ require_once get_template_directory() . '/config/breadcrumbs.php';
 
 add_theme_support( 'post-thumbnails' );
 
-function unique_baulemente_theme_enqueue_scripts() {
+function aa_theme_enqueue_scripts() {
   // Tailwind custom style
   wp_enqueue_style( 'tailwind-custom-styles', get_stylesheet_directory_uri() . '/assets/dist/output.css', array(), '1.2.2' );
   // Sass custom style
@@ -19,8 +19,9 @@ function unique_baulemente_theme_enqueue_scripts() {
   wp_enqueue_script( 'custom-modal-script', get_stylesheet_directory_uri() . '/assets/js/modal.js', array( 'jquery' ), '1.1.0', false );
   wp_enqueue_script( 'custom-scroll-script', get_stylesheet_directory_uri() . '/assets/js/scrollPosition.js', array( 'jquery' ), '1.1.0', false );
   wp_enqueue_script( 'slider-script', get_stylesheet_directory_uri() . '/assets/js/slider.js', array( 'jquery' ), '1.1.0', false );
+  wp_enqueue_script( 'who-we-are-script', get_stylesheet_directory_uri() . '/assets/js/who-we-are.js', array( 'jquery' ), '1.1.0', false );
 }
-add_action( 'wp_enqueue_scripts', 'unique_baulemente_theme_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', 'aa_theme_enqueue_scripts' );
 
   
 class Custom_Walker_Class extends Walker_Nav_Menu {
@@ -40,8 +41,8 @@ class Custom_Walker_Class extends Walker_Nav_Menu {
 }
 
 function custom_template_folder( $template ) {
-  if ( is_singular( 'product' ) ) {
-      $template = get_template_directory() . '/templates/single-product.php';
+  if ( is_singular( 'project' ) ) {
+      $template = get_template_directory() . '/templates/single-project.php';
   } 
   if ( is_singular( 'member' ) ) {
       $template = get_template_directory() . '/templates/single-member.php';
@@ -54,9 +55,9 @@ function custom_template_folder( $template ) {
 }
 add_filter( 'template_include', 'custom_template_folder' );
 
- //Unique Baulemente insert function post view count 
- function unique_baulemente_insert_views_post($post_id){
-  $meta_key = 'unique_baulemente_post_views_count';
+ //AA insert function post view count 
+ function aa_insert_views_post($post_id){
+  $meta_key = 'aa_post_views_count';
 
   $count = get_post_meta($post_id, $meta_key, true);
 
@@ -71,9 +72,9 @@ add_filter( 'template_include', 'custom_template_folder' );
     update_post_meta($post_id, $meta_key, $count);
   }
  }
- //Unique Baulemente getCount number
- function unique_baulemente_get_views_post_count($post_id){
-  $meta_key = 'unique_baulemente_post_views_count';
+ //AA getCount number
+ function aa_get_views_post_count($post_id){
+  $meta_key = 'aa_post_views_count';
 
   $count = get_post_meta($post_id, $meta_key, true);
 
