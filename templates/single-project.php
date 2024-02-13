@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Product
+ * Template Name: Project
  */
 get_header(); ?>
 <div id="loader">
@@ -13,11 +13,11 @@ get_header(); ?>
     <?php    
         if (have_posts()) {
             while (have_posts()) {
-                unique_baulemente_insert_views_post(get_the_ID());
+                aa_insert_views_post(get_the_ID());
                 the_post();
                 ?>
                 <div class="max-h-[400px] relative"> 
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/single-article-banner.webp" alt="Single product banner" class="opacity-75 max-h-[400px] w-full object-cover" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/single-article-banner.webp" alt="Single project banner" class="opacity-75 max-h-[400px] w-full object-cover" />
                     <h1 class="absolute top-[16%] -translate-x-1/2 left-1/2 text-blue-50 lg:text-white text-2xl lg:text-4xl w-full font-bold text-center"><?php the_title();?> </h1>
                     <p><?php custom_breadcrumbs("absolute top-1/2 w-full text-center -translate-x-1/2 left-1/2 text-lg text-blue-50 lg:text-white ") ?></p>
                 </div>
@@ -144,7 +144,7 @@ get_header(); ?>
                 <?php
             }
         } else {
-            echo 'Product not found.';
+            echo 'Project not found.';
         }
     ?>
     

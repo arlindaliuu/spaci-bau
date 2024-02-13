@@ -5,9 +5,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#ff7523"/>
-<meta name="description" content="Willkommen bei Spaci Bau. Wir bieten maßgeschneiderte Türinstallationen, Fensteraustausch und Reparatur, Tür- und Fensterwartung, Sicherheitslösungen, Spezialtüren und -fenster sowie Beratung und Designservices. Entdecken Sie hochwertige Lösungen für Ihre Türen und Fensterbedürfnisse. Kontaktieren Sie uns noch heute für eine individuelle Beratung!">
+<meta name="description" content="Entdecken Sie unvergleichliches Handwerk und innovative Lösungen mit Spaci Bau. Von hochwertigem Bau bis hin zur Kundenzufriedenheit sind wir bestrebt, in jedem Projekt Exzellenz zu liefern. Erforschen Sie noch heute unsere Dienstleistungen und lassen Sie uns Ihre Vision zum Leben erwecken.">
 <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/manifest.json">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 <?php wp_head(); ?>
 </head>

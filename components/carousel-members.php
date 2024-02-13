@@ -25,7 +25,7 @@ $products_query = new WP_Query($args);
     if ($products_query->have_posts()) {
       while ($products_query->have_posts()) {
         $products_query->the_post();
-        $product_categories = get_the_terms(get_the_ID(), 'product_category');
+        $product_categories = get_the_terms(get_the_ID(), 'project_category');
         $product_category_slugs = array();
         if ($product_categories) {
           foreach ($product_categories as $category) {

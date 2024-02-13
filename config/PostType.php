@@ -1,49 +1,49 @@
 <?php
 // Add custom post type
-function product_post_type() {
+function project_post_type() {
     $labels = array(
-        'name'               => __( 'Products', 'text-domain' ),
-        'singular_name'      => __( 'Product', 'text-domain' ),
-        'add_new'            => __( 'Add New Product', 'text-domain' ),
-        'add_new_item'       => __( 'Add New Product', 'text-domain' ),
-        'edit_item'          => __( 'Edit Product', 'text-domain' ),
-        'new_item'           => __( 'New Product', 'text-domain' ),
-        'view_item'          => __( 'View Product', 'text-domain' ),
-        'search_items'       => __( 'Search Products', 'text-domain' ),
-        'not_found'          => __( 'No products found', 'text-domain' ),
-        'not_found_in_trash' => __( 'No products found in Trash', 'text-domain' ),
-        'parent_item_colon'  => __( 'Parent Product:', 'text-domain' ),
-        'menu_name'          => __( 'Products', 'text-domain' ),
+        'name'               => __( 'Projects', 'text-domain' ),
+        'singular_name'      => __( 'Project', 'text-domain' ),
+        'add_new'            => __( 'Add New Project', 'text-domain' ),
+        'add_new_item'       => __( 'Add New Project', 'text-domain' ),
+        'edit_item'          => __( 'Edit Project', 'text-domain' ),
+        'new_item'           => __( 'New Project', 'text-domain' ),
+        'view_item'          => __( 'View Project', 'text-domain' ),
+        'search_items'       => __( 'Search Project', 'text-domain' ),
+        'not_found'          => __( 'No rojects found', 'text-domain' ),
+        'not_found_in_trash' => __( 'No projects found in Trash', 'text-domain' ),
+        'parent_item_colon'  => __( 'Parent Project:', 'text-domain' ),
+        'menu_name'          => __( 'Projects', 'text-domain' ),
     );
 
     $args = array(
         'labels'              => $labels,
         'hierarchical'        => false,
-        'description'         => 'Custom post type for products',
+        'description'         => 'Custom post type for Projects',
         'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
         'public'              => true,
         'publicly_queryable'  => true,
         'query_var'           => true,
-        'rewrite'             => array( 'slug' => 'produkt' ),
+        'rewrite'             => array( 'slug' => 'projekte' ),
         'has_archive'         => true,
         'menu_icon'           => 'dashicons-cart', // Customize the icon as needed
         'menu_position'       => 2,
     );
 
-    register_post_type( 'product', $args );
+    register_post_type( 'project', $args );
     // Add taxonomy
     $taxonomy_labels = array(
-        'name'              => __( 'Product Categories', 'text-domain' ),
-        'singular_name'     => __( 'Product Category', 'text-domain' ),
-        'search_items'      => __( 'Search Product Categories', 'text-domain' ),
-        'all_items'         => __( 'All Product Categories', 'text-domain' ),
-        'parent_item'       => __( 'Parent Product Category', 'text-domain' ),
-        'parent_item_colon' => __( 'Parent Product Category:', 'text-domain' ),
-        'edit_item'         => __( 'Edit Product Category', 'text-domain' ),
-        'update_item'       => __( 'Update Product Category', 'text-domain' ),
-        'add_new_item'      => __( 'Add New Product Category', 'text-domain' ),
-        'new_item_name'     => __( 'New Product Category Name', 'text-domain' ),
-        'menu_name'         => __( 'Product Categories', 'text-domain' ),
+        'name'              => __( 'Project Categories', 'text-domain' ),
+        'singular_name'     => __( 'Project Category', 'text-domain' ),
+        'search_items'      => __( 'Search Project Categories', 'text-domain' ),
+        'all_items'         => __( 'All Project Categories', 'text-domain' ),
+        'parent_item'       => __( 'Parent Project Category', 'text-domain' ),
+        'parent_item_colon' => __( 'Parent Project Category:', 'text-domain' ),
+        'edit_item'         => __( 'Edit Project Category', 'text-domain' ),
+        'update_item'       => __( 'Update Project Category', 'text-domain' ),
+        'add_new_item'      => __( 'Add New Project Category', 'text-domain' ),
+        'new_item_name'     => __( 'New Project Category Name', 'text-domain' ),
+        'menu_name'         => __( 'Project Categories', 'text-domain' ),
     );
 
     $taxonomy_args = array(
@@ -54,12 +54,12 @@ function product_post_type() {
         'show_admin_column'  => true,
         'show_in_nav_menus'  => true,
         'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'produktkategorie' ),
+        'rewrite'            => array( 'slug' => 'projektekategorie' ),
     );
 
-    register_taxonomy( 'product_category', 'product', $taxonomy_args );
+    register_taxonomy( 'project_category', 'project', $taxonomy_args );
 }
-add_action( 'init', 'product_post_type' );
+add_action( 'init', 'project_post_type' );
 
 function member_post_type() {
     $labels = array(
