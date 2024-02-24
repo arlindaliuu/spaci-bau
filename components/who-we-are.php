@@ -1,5 +1,5 @@
 <!---- Who we are section ---->
-<section>
+<section class="relative z-30">
     <div class="grid grid-cols-1 lg:grid-cols-3 max-w-5xl lg:mx-auto border-1 -mt-10 shadow-2xl mb-16 mx-6">
         <div class="lg:col-span-2 relative flex flex-wrap justify-between">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pattern.jpg" alt="Pattern image" class="absolute top-0 lef-0 w-full h-full object-cover"/>
@@ -19,6 +19,43 @@
         </div>
         <div class="lg:col-span-1">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/construction_banner.jpg" alt="Construction banner image" class="h-full w-full" />
+        </div>
+    </div>
+    <div class="max-w-5xl lg:mx-auto grid py-10 mx-6">
+        <p class="text-4xl">Making your vision come true at the basics.</p>
+        <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 mt-6">
+            <div class="bg-white border">
+                <div class="border p-6 flex gap-6 justify-center items-center">
+                    <div>
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/construction.png" class="min-w-[40px] max-w-[40px] max-h-[40px] min-h-[40px]" alt="Construction Icon" />
+                    </div>
+                    <div>
+                        <p class="text-2xl font-semibold">General Construction</p>
+                        <span class="mt-6 text-gray-400 block text-sm">Service overview With experience contracting and professional industry latest generation technological.</span>
+                    </div>
+                </div>
+                <div class="border p-6 flex gap-6 justify-center items-center">
+                    <div>
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/company.png" class="min-w-[40px] max-w-[40px] max-h-[40px] min-h-[40px]" alt="Construction Icon" />
+                    </div>
+                    <div>
+                        <p class="text-2xl font-semibold">Building Design</p>
+                        <span class="mt-6 text-gray-400 block text-sm">ervice overview With experience contracting and professional industry latest generation technological.</span>
+                    </div>
+                </div>
+                <div class="border p-6 flex gap-6 justify-center items-center">
+                    <div>
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/project.png" class="min-w-[40px] max-w-[40px] max-h-[40px] min-h-[40px]" alt="Construction Icon" />
+                    </div>
+                    <div>
+                        <p class="text-2xl font-semibold">Project Management</p>
+                        <span class="mt-6 text-gray-400 block text-sm">Service overview With experience contracting and professional industry latest generation technological.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="self-center">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/planner-img.jpg" />
+            </div>
         </div>
     </div>
 </section>

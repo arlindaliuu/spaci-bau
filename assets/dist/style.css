@@ -564,6 +564,11 @@
 #slider-wrapper h1 {
   font-size: 40px;
 }
+@media only screen and (max-width: 1024px) {
+  #slider-wrapper h1 {
+    font-size: 24px;
+  }
+}
 
 /* Apply the font to your desired elements */
 h1, h2, h3, h4, h5, h6 {
@@ -592,14 +597,18 @@ li.has-children.hover > .sub_item {
 
 .wrapper-carousel {
   position: relative;
-  background-image: url("../../assets/images/carousel.webp");
+  background-color: #FDE761;
   background-size: cover;
 }
 
 .carousel-bg {
-  background-image: url("../../assets/images/carousel.webp");
-  background-size: cover;
-  box-shadow: -10px 0px 10px 1px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  right: -26px;
+  top: 0;
+  height: 100%; /* Adjust as needed */
+  width: 2%; /* Adjust as needed */
+  z-index: 10; /* Ensure it's above other elements */
+  box-shadow: -10px 0px 10px -10px rgba(0, 0, 0, 0.75);
 }
 
 .carousel {

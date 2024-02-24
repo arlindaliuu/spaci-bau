@@ -179,68 +179,68 @@ function add_custom_flexible_content_field() {
                                 ),
                             ),
                         ),
-                        array(
-                            'name' => 'service_module',
-                            'label' => 'Services',
-                            'sub_fields' => array(
-                                array(
-                                    'key' => 'field_service_main_title', // Service Main Title field
-                                    'label' => 'Service Main Title',
-                                    'name' => 'service_main_title',
-                                    'type' => 'text',
-                                    'wrapper' => array(
-                                        'width' => '50%', 
-                                    ),
-                                ),
-                                array(
-                                    'key' => 'field_service_main_content', // Service Main Content field
-                                    'label' => 'Service Main Content',
-                                    'name' => 'service_main_content',
-                                    'type' => 'wysiwyg',
-                                    'wrapper' => array(
-                                        'width' => '50%', 
-                                    ),
-                                ),
-                                array(
-                                    'key' => 'field_services', // Repeater field for slider images
-                                    'label' => 'Services',
-                                    'name' => 'services',
-                                    'type' => 'repeater',
-                                    'min' => 1, // Minimum rows allowed (optional)
-                                    'layout' => 'block', // Set layout to 'block' for a more visually appealing display
-                                    'button_label' => 'Add Services', 
-                                    'sub_fields' => array(
-                                        array(
-                                            'key' => 'field_service_title45123',
-                                            'label' => 'Single Service Title',
-                                            'name' => 'single_service_title',
-                                            'type' => 'text',
-                                            'wrapper' => array(
-                                                'width' => '50%', 
-                                            ),
-                                        ),
-                                        array(
-                                            'key' => 'field_service_image192', 
-                                            'label' => 'Single Service Image',
-                                            'name' => 'single_service_image',
-                                            'type' => 'image',
-                                            'wrapper' => array(
-                                                'width' => '50%',
-                                            ),
-                                        ),
-                                        array(
-                                            'key' => 'field_service_content223', 
-                                            'label' => 'Single Service Content',
-                                            'name' => 'single_service_content',
-                                            'type' => 'wysiwyg',
-                                            'wrapper' => array(
-                                                'width' => '100%',
-                                            ),
-                                        ),
-                                    ),
-                                ),
-                            ),
-                        ),
+                        // array(
+                        //     'name' => 'service_module',
+                        //     'label' => 'Services',
+                        //     'sub_fields' => array(
+                        //         array(
+                        //             'key' => 'field_service_main_title', // Service Main Title field
+                        //             'label' => 'Service Main Title',
+                        //             'name' => 'service_main_title',
+                        //             'type' => 'text',
+                        //             'wrapper' => array(
+                        //                 'width' => '50%', 
+                        //             ),
+                        //         ),
+                        //         array(
+                        //             'key' => 'field_service_main_content', // Service Main Content field
+                        //             'label' => 'Service Main Content',
+                        //             'name' => 'service_main_content',
+                        //             'type' => 'wysiwyg',
+                        //             'wrapper' => array(
+                        //                 'width' => '50%', 
+                        //             ),
+                        //         ),
+                        //         array(
+                        //             'key' => 'field_services', // Repeater field for slider images
+                        //             'label' => 'Services',
+                        //             'name' => 'services',
+                        //             'type' => 'repeater',
+                        //             'min' => 1, // Minimum rows allowed (optional)
+                        //             'layout' => 'block', // Set layout to 'block' for a more visually appealing display
+                        //             'button_label' => 'Add Services', 
+                        //             'sub_fields' => array(
+                        //                 array(
+                        //                     'key' => 'field_service_title45123',
+                        //                     'label' => 'Single Service Title',
+                        //                     'name' => 'single_service_title',
+                        //                     'type' => 'text',
+                        //                     'wrapper' => array(
+                        //                         'width' => '50%', 
+                        //                     ),
+                        //                 ),
+                        //                 array(
+                        //                     'key' => 'field_service_image192', 
+                        //                     'label' => 'Single Service Image',
+                        //                     'name' => 'single_service_image',
+                        //                     'type' => 'image',
+                        //                     'wrapper' => array(
+                        //                         'width' => '50%',
+                        //                     ),
+                        //                 ),
+                        //                 array(
+                        //                     'key' => 'field_service_content223', 
+                        //                     'label' => 'Single Service Content',
+                        //                     'name' => 'single_service_content',
+                        //                     'type' => 'wysiwyg',
+                        //                     'wrapper' => array(
+                        //                         'width' => '100%',
+                        //                     ),
+                        //                 ),
+                        //             ),
+                        //         ),
+                        //     ),
+                        //),
                         // Add more layouts as needed
                     ),
                 ),
@@ -249,8 +249,8 @@ function add_custom_flexible_content_field() {
                 array(
                     array(
                         'param' => 'post_type',
-                        'operator' => '==',
-                        'value' => 'page', // Adjust post type if needed
+                        'operator' => '!=',
+                        'value' => 'acf-field-group', // Apply flexible content to all
                     ),
                 ),
             ),

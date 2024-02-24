@@ -1,25 +1,25 @@
 <?php
-      $logo_url = get_field('logo', 'option');
-      $data = get_field('whats_app', 'option'); 
+      $logo_url = get_field('website_logo', 'option');
+      $data = get_field('contact_details_group', 'option'); 
 ?>
 <footer class="bg-[#232323] text-white pt-8">
    <div class="w-full grid lg:grid-cols-3 pb-10 container mx-auto">
         <div class="lg:border-r lg:border-r-yellow-500 flex p-2 lg:justify-center items-center py-6">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/email.webp" alt="Logo" class="h-8 w-10 object-contain  animate-duration-[3000ms]" />
             <p class="ml-3">Schreiben Sie uns eine E-Mail :
-            <?= $data['email']; ?>
+            <?= $data['website_email']; ?>
             </p>
         </div>
         <div class="flex p-2 lg:justify-center items-center py-6">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/telephone.webp" alt="Logo" class="h-8 w-10 object-contain" />
             <p class="ml-3">Rufen Sie uns an unter:
-            <?= $data['number']; ?>
+            <?= $data['website_phone_no']; ?>
         </p>
         </div>
         <div class="lg:border-l lg:border-yellow-500   flex p-2 lg:justify-center items-center py-6">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/placeholder.webp" alt="Logo" class="h-8 w-10 object-contain" />
             <p class="ml-3">
-                <?= $data['adress']; ?>
+                <?= $data['company_adress']; ?>
             </p>
         </div>
     </div>
@@ -28,9 +28,9 @@
                     <div class="w-full mb-8 md:mb-0 order-4 md:order-1">
                         <h1 class="text-xl mb-4">Finde uns</h1>
                         <ul class="flex">
-                            <?php $social_media = get_field('social_media', 'option'); ?>
+                            <?php $social_media = get_field('social_media_group', 'option'); ?>
                             <li class="footer-social__item w-10 h-10 mr-2 mb-2">
-                                <a href="<?= $social_media['instagram']; ?>" target="_blank" rel="noopener noreferrer">
+                                <a href="<?= $social_media['website_instagram_link']; ?>" target="_blank" rel="noopener noreferrer">
                                     <img
                                         src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/instagram.webp"
                                         srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/instagram.webp 18w"
@@ -42,7 +42,7 @@
                                 </a>
                             </li>
                             <li class="footer-social__item w-10 h-10 mr-2 mb-2">
-                                <a href="<?= $social_media['facebook']; ?>" target="_blank" rel="noopener noreferrer">
+                                <a href="<?= $social_media['website_facebook_link']; ?>" target="_blank" rel="noopener noreferrer">
                                     <img
                                         src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/facebook.webp"
                                         srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/facebook.webp 18w"
@@ -54,7 +54,7 @@
                                 </a>
                             </li>
                             <li class="footer-social__item w-10 h-10 mr-2 mb-2">
-                                <a href="<?= $social_media['youtube']; ?>" target="_blank" rel="noopener noreferrer">
+                                <a href="<?= $social_media['website_youtube_link']; ?>" target="_blank" rel="noopener noreferrer">
                                     <img
                                         src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/youtube.webp"
                                         srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/youtube.webp 18w"

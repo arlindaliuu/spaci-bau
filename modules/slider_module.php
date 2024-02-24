@@ -21,7 +21,7 @@
                 <div class="slider_data first:block hidden duration-300 animate-fade-left">
                     <img src="<?= $data['slider_data'][$i]['slider_image']['url'] ?>" class="max-h-[800px] min-h-[800px] w-full object-cover" alt="<?= $data['slider_data'][$i]['image_name'] ?>" />
                     <?php if ($isContainer) : ?>
-                        <div class='min-w-[30%] lg:max-w-[30%] w-full lg:w-min max-h-[50%] absolute top-1/2 lg:-translate-x-1/2 -translate-y-1/2 <?= $sliderPosition === 'left' ? 'lg:left-1/3' : ($sliderPosition === 'middle' ? 'lg:left-1/2' : 'lg:left-[66%]') ?> bg-neutral-500/50 p-6'>
+                        <div class='min-w-[30%] w-full lg:w-min max-h-[50%] absolute top-1/2 lg:-translate-x-1/2 -translate-y-1/2 <?= $sliderPosition === 'left' ? 'lg:left-1/3' : ($sliderPosition === 'middle' ? 'lg:left-1/2' : 'lg:left-[66%]') ?> bg-neutral-500/50 p-6'>
                             <div class="p-6 bg-neutral-500/60 text-white">
                                 <?= $sliderContainerText ?>
                             </div>

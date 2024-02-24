@@ -14,7 +14,7 @@
 </head>
 <body>
 <?php
-      $logo_url = get_field('logo', 'option');
+      $logo_url = get_field('website_logo', 'option');
 ?>
 <header id="main-header" class="z-40 w-full">
   <div class="header min-h-[70px] lg:max-h-[90px] w-full grid lg:grid-cols-2 bg-white lg:bg-transparent shadow-lg z-40 relative backdrop-blur-2xl">

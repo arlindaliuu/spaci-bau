@@ -11,13 +11,15 @@
   $modules = get_field('field_1', get_the_ID()); 
   
   for( $i = 0; $i < count($modules); $i++){
+    if($i == 1){
+      get_template_part('components/who-we-are');
+    }
     getModules($modules[$i]['acf_fc_layout']);
   }
    ?>
 
 
-
-<?php get_template_part('components/who-we-are'); ?>
+<?php get_template_part('components/cards/service_card'); ?>
 <?php get_template_part('components/map'); ?>
 <?php get_template_part('components/contact-us'); ?>
 <?php get_template_part('components/whatsapp-button'); ?>
