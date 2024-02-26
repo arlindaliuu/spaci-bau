@@ -123,7 +123,7 @@
                                 <div>
                                     <h2 class="text-lg font-bold text-blue-50 mb-2"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                                     <p class="text-blue-50 mb-4 text-sm"><?php echo wp_trim_words(get_the_excerpt(), 7); ?></p>
-                                    <a href="<?php the_permalink(); ?>" class="px-3 py-1 bg-yellow-600 text-black block text-sm text-center rounded-lg hover:text-white hover:bg-blue-50 duration-300 hover:scale-105">
+                                    <a href="<?php the_permalink(); ?>" class="px-3 py-1 bg-yellow-600 text-black-900 font-semibold block text-sm text-center rounded-lg hover:text-white hover:bg-blue-50 duration-300 hover:scale-105">
                                     Weiterlesen
                                 </a>
                                 </div>

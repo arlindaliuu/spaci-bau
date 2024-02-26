@@ -179,6 +179,41 @@ function add_custom_flexible_content_field() {
                                 ),
                             ),
                         ),
+                        array(
+                            'name' => 'faq_module',
+                            'label' => 'FAQ Module',
+                            'sub_fields' => array(
+                                array(
+                                    'key' => 'field_faq', // Repeater field for slider images
+                                    'label' => 'FAQ',
+                                    'name' => 'faq',
+                                    'type' => 'repeater',
+                                    'min' => 1, 
+                                    'layout' => 'block', 
+                                    'button_label' => 'Add FAQ', 
+                                    'sub_fields' => array(
+                                        array(
+                                            'key' => 'field_faq_question',
+                                            'label' => 'Question',
+                                            'name' => 'faq_question',
+                                            'type' => 'text',
+                                            'wrapper' => array(
+                                                'width' => '50%', 
+                                            ),
+                                        ),
+                                        array(
+                                            'key' => 'field_faq_answer',
+                                            'label' => 'Answer',
+                                            'name' => 'faq_answer',
+                                            'type' => 'wysiwyg',
+                                            'wrapper' => array(
+                                                'width' => '50%', 
+                                            ),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
                         // array(
                         //     'name' => 'service_module',
                         //     'label' => 'Services',

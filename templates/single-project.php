@@ -101,7 +101,6 @@ get_header(); ?>
                                         ?>
                                 </div>
                             </div>   
-                            <button class="button-52 mt-6" id="openModalBtn">Kaufe jetzt</button>
                             <div class="modal-overlay z-20" id="modalOverlay">
                                 <div class="modal z-20 mt-6 max-w-4xl">
                                     <button class="close-button w-9 h-9" id="closeModalBtn">×</button>

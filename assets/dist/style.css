@@ -192,7 +192,6 @@
 }
 .wpcf7 .wpcf7-form p:nth-child(6) {
   position: relative;
-  width: 30%;
   font-size: 20px;
   font-weight: 500;
   padding: 5px;
@@ -848,6 +847,15 @@ select::-webkit-scrollbar-thumb:active {
   border-left-color: transparent;
   border-bottom-color: #eab308;
   border-right-color: #eab308;
+}
+
+.slider-animation {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.slider-animation.active {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

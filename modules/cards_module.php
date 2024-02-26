@@ -40,7 +40,7 @@ $modules = get_field('field_1', get_the_ID());
    
   $products_query = new WP_Query($args);
   ?>
-   <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bg-cards-up.webp" class="w-full -mb-1"/>
+   <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bg-cards-up.webp" class="w-full -mb-1" alt="ArrowTop Slider Image"/>
     <div class="wrapper-carousel flex justify-center items-center relative flex-wrap flex-col">
       <div class="carousel pt-20">
         <p class="text-2xl lg:text-4xl font-semibold text-gray-900 mb-10 px-10 lg:px-0 lg:text-left text-center"><?= $title ?> <hr class="w-full lg:w-2/12 h-2 border-solid border-t-4 border-yellow-600"/></p>
@@ -87,8 +87,8 @@ $modules = get_field('field_1', get_the_ID());
         </div>
       </div>
       <div class="flex justify-between lg:justify-start px-10 gap-10 pb-20 w-full max-w-screen-xl	">
-          <button class="carousel-arrow-prev bg-white py-3 px-4 hover:bg-blue-400 hover:text-blue-50 hover:scale-110 duration-200 rounded-md">&lt;</button>
-          <button class="carousel-arrow-next bg-white py-3 px-4 hover:bg-blue-400 hover:text-blue-50 hover:scale-110 duration-200 rounded-md">&gt;</button>
+          <button class="carousel-arrow-prev bg-white py-3 px-4 hover:bg-red-500 hover:text-blue-50 hover:scale-110 duration-200 rounded-md">&lt;</button>
+          <button class="carousel-arrow-next bg-white py-3 px-4 hover:bg-red-500 hover:text-blue-50 hover:scale-110 duration-200 rounded-md">&gt;</button>
         </div>
     </div>
-    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bg-cards-down.webp" class="w-full -mt-1"/>
+    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bg-cards-down.webp" class="w-full -mt-1" alt="ArrowBottom Slider Image" />
