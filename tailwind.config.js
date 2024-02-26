@@ -5,6 +5,7 @@ module.exports = {
     "./**.{php,html,js}",
     "./parts/*.{php,html,js}",
     "./components/*.{php,html,js}",
+    "./components/cards/*.{php,html,js}",
     "./templates/*.{php,html,js}",
     "./modules/*.{php,html,js}",
   ],
@@ -51,6 +52,12 @@ module.exports = {
         },
         'green':{
           900: '#008080'
+        },
+        'red':{
+          500:'#C80120',
+        },
+        'yellow':{
+          500: '#FDE761',
         }
       }
     }

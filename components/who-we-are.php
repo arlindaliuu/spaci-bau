@@ -31,7 +31,7 @@
                     </div>
                     <div>
                         <p class="text-2xl font-semibold">General Construction</p>
-                        <span class="mt-6 text-gray-400 block text-sm">Service overview With experience contracting and professional industry latest generation technological.</span>
+                        <span class="mt-6 block text-sm">Service overview With experience contracting and professional industry latest generation technological.</span>
                     </div>
                 </div>
                 <div class="border p-6 flex gap-6 justify-center items-center">
@@ -40,7 +40,7 @@
                     </div>
                     <div>
                         <p class="text-2xl font-semibold">Building Design</p>
-                        <span class="mt-6 text-gray-400 block text-sm">ervice overview With experience contracting and professional industry latest generation technological.</span>
+                        <span class="mt-6 block text-sm">ervice overview With experience contracting and professional industry latest generation technological.</span>
                     </div>
                 </div>
                 <div class="border p-6 flex gap-6 justify-center items-center">
@@ -49,12 +49,12 @@
                     </div>
                     <div>
                         <p class="text-2xl font-semibold">Project Management</p>
-                        <span class="mt-6 text-gray-400 block text-sm">Service overview With experience contracting and professional industry latest generation technological.</span>
+                        <span class="mt-6 block text-sm">Service overview With experience contracting and professional industry latest generation technological.</span>
                     </div>
                 </div>
             </div>
             <div class="self-center">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/planner-img.jpg" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/planner-img.jpg" alt="Who are we Image"/>
             </div>
         </div>
     </div>

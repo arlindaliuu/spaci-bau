@@ -4,13 +4,13 @@ $sevices_main_title = get_field('service_main_title', 'option');
 $sevices_main_content = get_field('service_main_content', 'option');
 ?>
 <!-- Section: Services -->
-<section class="my-20">
+<section class="my-10">
     <div class="targetDiv animate-duration-[3000ms] max-w-mdm m-auto py-20 xl:px-0 px-10">
         <div>
             <h1 class="text-3xl lg:text-4xl font-semibold text-blue-50"><?= $sevices_main_title ?></h1>
         <div>
         <div>
-            <p class="text-black-700 mt-4">
+            <p class="mt-4">
                 <?= $sevices_main_content ?>
             </p>
         </div>

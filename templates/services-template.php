@@ -1,11 +1,11 @@
 
-<div id="loader">
+<!-- <div id="loader">
   <div class="battery-container">
     <div class="battery-fill" id="battery-fill"></div>
   </div>
   <div class="battery-text">Wird geladen...</div>
 </div>
-<div id="content" class="content-loaded" style="display: none;">
+<div id="content" class="content-loaded" style="display: none;"> -->
 <?php
 $services = get_field('field_services', 'option');
 $sevices_main_title = get_field('service_main_title', 'option');
@@ -15,11 +15,14 @@ get_header();
 ?>
   <div class="parallax" data-speed="0.5">
       <div class="parallax-content w-full">
-          <p class="text-3xl text-white font-bold">Dienstleistungen</p>
+          <h1 class="text-3xl text-white font-bold">Dienstleistungen</h1>
           <p><?php custom_breadcrumbs("absolute top-1/2 w-full text-center -translate-x-1/2 left-1/2 text-lg text-white mt-10") ?></p>
       </div>
   </div>
   <div class="grid gap-4 mt-6 max-w-5xl mx-auto my-10">
+            <p class="text-3xl font-bold"><?= $sevices_main_title ?></p>
+            <p><?= $sevices_main_content ?></p>
+            <hr class="w-full border">
             <?php
             if ($services && is_array($services)) {
                 foreach ($services as $service) { ?>

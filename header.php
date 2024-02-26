@@ -8,7 +8,7 @@
 <meta name="description" content="Entdecken Sie unvergleichliches Handwerk und innovative Lösungen mit Spaci Bau. Von hochwertigem Bau bis hin zur Kundenzufriedenheit sind wir bestrebt, in jedem Projekt Exzellenz zu liefern. Erforschen Sie noch heute unsere Dienstleistungen und lassen Sie uns Ihre Vision zum Leben erwecken.">
 <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/manifest.json">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<link rel="preload" as="image" href="http://spaci-bau.test/wp-content/uploads/2024/02/paral-11.jpg" />
 
 <?php wp_head(); ?>
 </head>
