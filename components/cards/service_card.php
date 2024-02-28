@@ -18,7 +18,7 @@ $sevices_main_content = get_field('service_main_content', 'option');
             <?php
             if ($services && is_array($services)) {
                 foreach ($services as $service) { ?>
-                    <div class="p-4 shadow-xl bg-white flex hover:scale-105 duration-200 lg:flex-row flex-col">
+                    <div class="p-4 shadow-xl bg-white flex hover:scale-105 duration-200 lg:flex-row flex-col rounded-3xl overflow-hidden">
                         <div class="grid">
                             <h1 class="text-xl text-blue-50 font-bold"><?= $service["service_title"] ?></h1>
                             <p class="mt-2 text-black-700 text-md"><?= $service["service_description"] ?></p>

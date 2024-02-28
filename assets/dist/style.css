@@ -515,6 +515,10 @@
   font-family: "Roboto";
 }
 
+.bg-footer {
+  background-image: url("/wp-content/themes/spaci-bau/assets/images/footer-bg.webp");
+}
+
 /* cyrillic-ext */
 @font-face {
   font-family: "Montserrat";

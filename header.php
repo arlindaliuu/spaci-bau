@@ -125,7 +125,7 @@
 
     ?>
     <div class="lg:border-l-2 my-2 p-2 flex justify-center items-center lg:border-l-yellow-500">
-      <a href="tel:<?= urlencode($whatsapp['number']) ?>" class="uppercase font-bold text-center bg-yellow-500 mx-2 shadow-lg border px-3 hover:scale-110 hover:shadow-2xl py-2 text-white duration-200">Jetzt anrufen!</a>
+      <a href="tel:<?= urlencode($whatsapp['number']) ?>" class="uppercase font-bold text-center bg-yellow-500 mx-2 shadow-lg rounded-3xl border px-3 hover:scale-110 hover:shadow-2xl py-2 text-white duration-200">Jetzt anrufen!</a>
     </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <!---- Who we are section ---->
 <section class="relative z-30">
-    <div class="grid grid-cols-1 lg:grid-cols-3 max-w-5xl lg:mx-auto border-1 -mt-10 shadow-2xl mb-16 mx-6">
+    <div class="grid grid-cols-1 lg:grid-cols-3 max-w-5xl lg:mx-auto border-1 -mt-10 shadow-2xl mb-16 mx-6 rounded-3xl overflow-hidden">
         <div class="lg:col-span-2 relative flex flex-wrap justify-between">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pattern.jpg" alt="Pattern image" class="absolute top-0 lef-0 w-full h-full object-cover"/>
             <div class="relative p-10 grid lg:block">
@@ -24,7 +24,7 @@
     <div class="max-w-5xl lg:mx-auto grid py-10 mx-6">
         <p class="text-4xl">Making your vision come true at the basics.</p>
         <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 mt-6">
-            <div class="bg-white border">
+            <div class="bg-white border rounded-3xl overflow-hidden">
                 <div class="border p-6 flex gap-6 justify-center items-center">
                     <div>
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/construction.png" class="min-w-[40px] max-w-[40px] max-h-[40px] min-h-[40px]" alt="Construction Icon" />
@@ -53,7 +53,7 @@
                     </div>
                 </div>
             </div>
-            <div class="self-center">
+            <div class="self-center rounded-3xl overflow-hidden">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/planner-img.jpg" alt="Who are we Image"/>
             </div>
         </div>

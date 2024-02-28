@@ -139,7 +139,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //Sticky header
 window.addEventListener('scroll', function() {
-  if(this.window.innerWidth < 1024){
     var header = document.getElementById('main-header');
     var headerHeight = header.offsetHeight;
   
@@ -150,7 +149,6 @@ window.addEventListener('scroll', function() {
       header.classList.remove('fixed', 'top-0', 'animate-fade-down');
       document.body.style.paddingTop = 0;
     }
-  }
 });
 
 

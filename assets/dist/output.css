@@ -616,6 +616,10 @@ video {
   top: 16%;
 }
 
+.left-0 {
+  left: 0px;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -697,11 +701,6 @@ video {
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-}
-
-.my-20 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
 }
 
 .-mb-1 {
@@ -812,6 +811,14 @@ video {
   margin-top: 2rem;
 }
 
+.-mb-2 {
+  margin-bottom: -0.5rem;
+}
+
+.mt-40 {
+  margin-top: 10rem;
+}
+
 .block {
   display: block;
 }
@@ -878,6 +885,10 @@ video {
 
 .h-9 {
   height: 2.25rem;
+}
+
+.h-\[35px\] {
+  height: 35px;
 }
 
 .h-fit {
@@ -1279,6 +1290,10 @@ video {
   border-radius: 0.125rem;
 }
 
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -1445,6 +1460,11 @@ video {
 .bg-yellow-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(202 138 4 / var(--tw-bg-opacity));
+}
+
+.bg-slate-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-75 {
@@ -1687,6 +1707,11 @@ video {
   color: rgb(160 165 177 / var(--tw-text-opacity));
 }
 
+.text-black-900 {
+  --tw-text-opacity: 1;
+  color: rgb(36 36 36 / var(--tw-text-opacity));
+}
+
 .text-blue-50 {
   --tw-text-opacity: 1;
   color: rgb(23 38 71 / var(--tw-text-opacity));
@@ -1700,11 +1725,6 @@ video {
 .text-blue-800 {
   --tw-text-opacity: 1;
   color: rgb(2 62 138 / var(--tw-text-opacity));
-}
-
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .text-gray-500 {
@@ -1735,11 +1755,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-black-900 {
-  --tw-text-opacity: 1;
-  color: rgb(36 36 36 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1930,6 +1945,10 @@ video {
     display: block;
   }
 
+  .md\:h-\[50px\] {
+    height: 50px;
+  }
+
   .md\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
@@ -2064,6 +2083,10 @@ video {
 
   .lg\:h-20 {
     height: 5rem;
+  }
+
+  .lg\:h-\[80px\] {
+    height: 80px;
   }
 
   .lg\:max-h-\[450px\] {
@@ -2254,6 +2277,10 @@ video {
 
   .xl\:block {
     display: block;
+  }
+
+  .xl\:h-\[120px\] {
+    height: 120px;
   }
 
   .xl\:grid-cols-4 {
