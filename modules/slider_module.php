@@ -1,12 +1,3 @@
-<?php 
-    $modules = get_field('field_1', get_the_ID()); 
-    for( $i = 0; $i < count($modules) - 1; $i++){
-        if($modules[$i]['acf_fc_layout'] == "slider_module"){
-            $data = $modules[$i];
-        }
-    }
-    
-?>
     <!--- Section Slider ---->
     <section>
         <div id="slider-wrapper" class="slider-wrapper relative z-30 -mt-[70px]">
@@ -33,5 +24,3 @@
             <button id="prev-button" class="absolute top-1/2 left-4 lg:left-6 bg-black-900 hover:bg-transparent duration-300 hover:text-black-900 border-black-900 border rounded-full flex justify-center text-white px-3 py-1"><span>&laquo;</span></button>
         </div>
     </section> 
-
-

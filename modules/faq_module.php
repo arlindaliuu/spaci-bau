@@ -1,10 +1,5 @@
 <?php 
-    $modules = get_field('field_1', get_the_ID()); 
-    for( $i = 0; $i < count($modules); $i++){
-        if($modules[$i]['acf_fc_layout'] == "faq_module"){
-            $data = $modules[$i]['faq'];
-        }
-    }
+    $data = $data['faq'];
 ?>
 <div class="mx-auto my-10">
     <div class="max-w-mdm lg:mx-auto mx-6 relative">
