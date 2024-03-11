@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/forumiri/public_html/wp-content/themes/spaci-bau
-    - /bin/bash build.sh
+    - export DEPLOYPATH=/home/forumiri/public_html/wp-content/themes/spaci-bau/
+    - /bin/bash build.sh $DEPLOYPATH
