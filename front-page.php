@@ -10,14 +10,18 @@
 <?php 
   $modules = get_field('field_1', get_the_ID()); 
   
-  for( $i = 0; $i < count($modules); $i++){
-    if($i == 1){
+  foreach ($modules as $index => $module) {
+    if($index == 1){
+
       get_template_part('components/who-we-are');
+
       get_template_part('components/cards/service_card');
+
     }
-    getModules($modules[$i]['acf_fc_layout']);
-  }
-   ?>
+    getModules($module['acf_fc_layout'], $module);
+} 
+
+?>
 
 
 <?php get_template_part('components/map'); ?>
