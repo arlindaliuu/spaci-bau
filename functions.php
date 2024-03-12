@@ -91,27 +91,7 @@ add_filter( 'template_include', 'custom_template_folder' );
   }
   return $count;
  }
- function custom_why_us_shortcode() {
-  ob_start();
-  include 'components/why-us.php'; // Path to why-us.php file
-  return ob_get_clean();
-}
-function custom_carousel_team_shortcode() {
-  ob_start();
-  include 'components/carousel-members.php'; // Path to carousel-members.php file
-  return ob_get_clean();
-}
-function custom_carousel_shortcode($atts) {
-  $atts = shortcode_atts(array(
-      'category' => '', // Default to empty category
-      'title' => 'Unsere Produkte', // Default title
-  ), $atts);
 
-  ob_start();
-  include 'components/carousel.php'; // Path to carousel.php file
-  return ob_get_clean();
-}
-add_shortcode('carousel', 'custom_carousel_shortcode');
 function custom_contact_us_shortcode() {
   ob_start();
   include 'components/contact-us.php'; // Path to contact-us.php file
@@ -119,13 +99,26 @@ function custom_contact_us_shortcode() {
 }
 function custom_services_shortcode() {
   ob_start();
-  include 'components/services.php'; // Path to services.php file
+  include 'components/cards/service_card.php'; // Path to services.php file
   return ob_get_clean();
 }
+
+function custom_map_shortcode() {
+  ob_start();
+  include 'components/map.php'; // Path to services.php file
+  return ob_get_clean();
+}
+
+function custom_who_we_are_shortcode() {
+  ob_start();
+  include 'components/who-we-are.php'; // Path to services.php file
+  return ob_get_clean();
+}
+
+add_shortcode('map','custom_map_shortcode');
 add_shortcode('contact-us', 'custom_contact_us_shortcode');
 add_shortcode('carousel', 'custom_carousel_shortcode');
-add_shortcode('carousel-ourteam', 'custom_carousel_team_shortcode');
-add_shortcode('why-us', 'custom_why_us_shortcode');
+add_shortcode('who-we-are', 'custom_who_we_are_shortcode');
 add_shortcode('services', 'custom_services_shortcode');
 
 

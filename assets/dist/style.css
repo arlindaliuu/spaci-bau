@@ -519,6 +519,17 @@
   background-image: url("/wp-content/themes/spaci-bau/assets/images/footer-bg.webp");
 }
 
+/* 
+Import modules folder
+*/
+.module-content_module h1, .module-content_module h2, .module-content_module h3, .module-content_module h4, .module-content_module h5 {
+  margin: 16px 0px 8px 0px;
+}
+.module-content_module h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
 /* cyrillic-ext */
 @font-face {
   font-family: "Montserrat";
