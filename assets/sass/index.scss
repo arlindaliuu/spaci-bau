@@ -9,6 +9,10 @@
 @import "./parts/pagination";
 @import "./parts/gmap.scss";
 @import "./parts/footer.scss";
+/* 
+Import modules folder
+*/
+@import "./modules/content-module.scss";
 
 /* cyrillic-ext */
 @font-face {

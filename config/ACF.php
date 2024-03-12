@@ -16,7 +16,7 @@ function add_custom_flexible_content_field() {
                     'layouts' => array(
                         array(
                             'name' => 'slider_module',
-                            'label' => 'Slider',
+                            'label' => 'Slider Module',
                             'sub_fields' => array(
                                 array(
                                     'key' => 'field_slider_data', // Repeater field for slider images
@@ -211,6 +211,19 @@ function add_custom_flexible_content_field() {
                                             ),
                                         ),
                                     ),
+                                ),
+                            ),
+                        ),
+                        array(
+                            'name' => 'content_module',
+                            'label' => 'Content Module',
+                            'sub_fields' => array(
+                                array(
+                                    'key' => 'field_content', // Repeater field for slider images
+                                    'label' => 'Content',
+                                    'name' => 'content',
+                                    'type' => 'wysiwyg',
+                                    'layout' => 'block', 
                                 ),
                             ),
                         ),

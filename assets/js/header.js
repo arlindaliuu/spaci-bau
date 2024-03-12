@@ -143,7 +143,7 @@ window.addEventListener('scroll', function() {
     var headerHeight = header.offsetHeight;
   
     if (window.pageYOffset > headerHeight) {
-      header.classList.add('fixed', 'top-0', 'animate-fade-down');
+      header.classList.add('fixed', 'top-0', 'animate-fade-down', 'bg-white');
       document.body.style.paddingTop = headerHeight + 'px';
     } else {
       header.classList.remove('fixed', 'top-0', 'animate-fade-down');
