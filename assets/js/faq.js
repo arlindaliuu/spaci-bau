@@ -1,17 +1,27 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const questions = document.querySelectorAll(".border-b");
+    const questions = document.querySelectorAll(".faq-container");
 
     questions.forEach(function(question) {
         question.addEventListener("click", function() {
             const answer = this.nextElementSibling;
-            const arrow = this.querySelector('.arrow');
-            console.log(arrow)
+            const arrowPlus = this.querySelector('.plus-sign');
+            const arrowMinus = this.querySelector('.minus-sign');
+
             if (answer.classList.contains("hidden")) {
                 answer.classList.remove("hidden");
-                arrow.style.transform = "rotate(0deg)";
+                answer.style.maxHeight = answer.scrollHeight + "px"; // Set max-height to the actual height of the answer
+                arrowPlus.classList.add('hidden');
+                arrowMinus.classList.remove('hidden');
             } else {
-                answer.classList.add("hidden");
-                arrow.style.transform = "rotate(180deg)";
+                // Set max-height to 0 to trigger closing animation
+                answer.style.maxHeight = "0";
+                arrowMinus.classList.add('hidden');
+                arrowPlus.classList.remove('hidden');
+
+                // Wait for the transition to complete before hiding the answer
+                answer.addEventListener("transitionend", function() {
+                    answer.classList.add("hidden"); // Hide the answer after the transition ends
+                }, { once: true });
             }
         });
     });

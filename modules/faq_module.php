@@ -9,12 +9,13 @@
             if ($data && is_array($data)) {
                 foreach ($data as $index => $faq) { ?>
                     <div class="bg-white shadow-md rounded-md mb-6 relative">
-                        <div class="p-4 border-b border-gray-200 cursor-pointer flex justify-between">
+                        <div class="faq-container p-4 border-b border-gray-200 cursor-pointer flex justify-between">
                             <h3 class="text-lg font-semibold"><?= $faq['faq_question'] ?></h3>
-                            <span class="arrow duration-300">&#11165;</span>
+                            <span class="arrow duration-300 plus-sign text-2xl">&#43;</span>
+                            <span class="arrow duration-300 minus-sign hidden text-2xl">&#8722;</span>
                         </div>
-                        <div class="p-4 border-b border-gray-200 hidden animate-fade-down">
-                            <p><?= $faq['faq_answer'] ?></p>
+                        <div class="faq-answer border-b border-gray-200 hidden">
+                            <?= $faq['faq_answer'] ?>
                         </div>
                     </div>
             <?php } ?>
