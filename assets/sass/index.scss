@@ -348,3 +348,26 @@ select::-webkit-scrollbar-thumb:active {
 .slider-animation.active {
   opacity: 1;
 }
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  p {
+    padding: 16px;
+  }
+}
+
+.faq-answer.visible {
+  max-height: 1000px; /* Adjust as needed */
+}
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.slider_data {
+  flex: 0 0 100%; /* Ensure each slide takes up full width */
+  transition: opacity 0.3s ease;
+}
+

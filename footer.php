@@ -143,7 +143,7 @@
         </div>
         <div class="h-fit lg:h-20 w-full bg-blue-700 ">
             <div class="container mx-auto mt-8 flex justify-center flex-wrap items-center gap-4 h-full p-4">
-                <img class="justify-self-center lg:justify-self-end" src="<?= $logo_url; ?>" alt="Logo" class="z-20 p-4" width="240" height="40" />
+                <img class="justify-self-center lg:justify-self-end h-full" src="<?= $logo_url; ?>" alt="Logo" class="z-20 p-4" width="240" height="40" />
                 <p class="text-center"><?php echo date("Y"); ?> &copy; Alle Rechte vorbehalten Spaci Bau.</p>
                 <p class="text-center contents">
                     Ein Projekt im Kopf? Lass uns reden! Verbinde dich mit mir:

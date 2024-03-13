@@ -560,6 +560,10 @@ video {
   visibility: visible;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .fixed {
   position: fixed;
 }
@@ -662,6 +666,10 @@ video {
 
 .m-auto {
   margin: auto;
+}
+
+.m-4 {
+  margin: 1rem;
 }
 
 .mx-10 {
