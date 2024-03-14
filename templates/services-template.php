@@ -40,9 +40,13 @@ get_header();
         <?php 
         $modules = get_field('field_1', get_the_ID()); 
         
-          for( $i = 0; $i < count($modules); $i++){
-            getModules($modules[$i]['acf_fc_layout']);
-          }
-        ?>
+        foreach ($modules as $index => $module) { ?> 
+          <div class="module-<?= $module['acf_fc_layout'] ?>">
+            <?php
+              getModules($module['acf_fc_layout'], $module);
+            ?>
+          </div>
+        <?php
+        } ?>
 
 <?php get_footer(); ?>

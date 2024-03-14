@@ -23,5 +23,4 @@
         </div>
      <button id="next-button" class="z-50 absolute top-1/2 right-4 lg:right-6 bg-black-900 hover:bg-transparent duration-300 hover:text-black-900 border-black-900 border rounded-full flex justify-center text-white px-3 py-1"><span>&raquo;</span></button>
      <button id="prev-button" class="z-50 absolute top-1/2 left-4 lg:left-6 bg-black-900 hover:bg-transparent duration-300 hover:text-black-900 border-black-900 border rounded-full flex justify-center text-white px-3 py-1"><span>&laquo;</span></button>
-      
     </section> 

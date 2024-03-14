@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="de">
-  <title>Qualitätsvolle Türen und Fenster: Räume mit Eleganz und Funktionalität bereichern</title>
+  <title> Spaci Bau - Experten für Bauarbeiten und Gartengestaltung</title>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#ff7523"/>
-<meta name="description" content="Entdecken Sie unvergleichliches Handwerk und innovative Lösungen mit Spaci Bau. Von hochwertigem Bau bis hin zur Kundenzufriedenheit sind wir bestrebt, in jedem Projekt Exzellenz zu liefern. Erforschen Sie noch heute unsere Dienstleistungen und lassen Sie uns Ihre Vision zum Leben erwecken.">
+<meta name="description" content="Entdecken Sie Handwerkskunst und Zuverlässigkeit mit Spaci Bau, unserer Bauunternehmung. Von der Errichtung von Häusern und Wohnungen bis zur Umgestaltung von Gärten setzen wir Visionen präzise und sorgfältig um. Entdecken Sie unser Leistungsspektrum und lassen Sie uns Ihre Bau-Träume wahr werden lassen.">
 <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/manifest.json">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="preload" as="image" href="http://spaci-bau.test/wp-content/uploads/2024/02/paral-11.jpg" />
+<link rel="preload" as="image" href="<?= get_bloginfo('url')?>/wp-content/uploads/2024/02/paral-11.webp" />
 
 <?php wp_head(); ?>
 </head>
