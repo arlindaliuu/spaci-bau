@@ -18,7 +18,7 @@
     </div>
   <?php
   } ?>
-
+<?php get_template_part('components/scroll-to-top'); ?>
 <?php get_template_part('components/contact-us'); ?>
 <?php get_template_part('components/whatsapp-button'); ?>
 

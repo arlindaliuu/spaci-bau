@@ -7,7 +7,7 @@ $sevices_main_content = get_field('service_main_content', 'option');
 <section class="my-10">
     <div class="targetDiv animate-duration-[3000ms] max-w-mdm m-auto py-20 xl:px-0 px-10">
         <div>
-            <h1 class="text-3xl lg:text-4xl font-semibold text-blue-50"><?= $sevices_main_title ?></h1>
+            <h2 class="text-xl lg:text-4xl font-semibold text-blue-50"><?= $sevices_main_title ?></h2>
         <div>
         <div>
             <p class="mt-4">
@@ -20,7 +20,7 @@ $sevices_main_content = get_field('service_main_content', 'option');
                 foreach ($services as $service) { ?>
                     <div class="p-4 shadow-xl bg-white flex hover:scale-105 duration-200 lg:flex-row flex-col rounded-3xl overflow-hidden">
                         <div class="grid">
-                            <h2 class="text-xl text-blue-50 font-bold"><?= $service["service_title"] ?></h2>
+                            <h3 class="text-lg lg:text-xl text-blue-50 font-bold"><?= $service["service_title"] ?></h3>
                             <p class="mt-2 text-black-700 text-md"><?= $service["service_description"] ?></p>
                             <a href="/dienstleistungen" class="text-red-950 font-bold cursor-pointer hover:underline self-end">Weiterlesen &#x21b7;</a>
                         </div>
