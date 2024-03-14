@@ -18,8 +18,18 @@ get_header();
             <p><?php custom_breadcrumbs("absolute top-1/2 w-full text-center -translate-x-1/2 left-1/2 text-lg text-white mt-10") ?></p>
         </div>
     </div>
-    <div>
-      <h1>This needs to be filled!!!!</h1>
+    <div class="my-10">
+    <?php 
+        $modules = get_field('field_1', get_the_ID()); 
+        
+        foreach ($modules as $index => $module) { ?> 
+          <div class="module-<?= $module['acf_fc_layout'] ?>">
+            <?php
+              getModules($module['acf_fc_layout'], $module);
+            ?>
+          </div>
+        <?php
+        } ?>
     </div>
   </div>
 </div>
