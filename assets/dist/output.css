@@ -1811,6 +1811,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.\!text-white {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -1959,6 +1964,11 @@ video {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:\!text-blue-50:hover {
+  --tw-text-opacity: 1 !important;
+  color: rgb(23 38 71 / var(--tw-text-opacity)) !important;
 }
 
 .hover\:underline:hover {

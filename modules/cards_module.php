@@ -80,7 +80,14 @@ if ($products_query->have_posts()) {
     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bg-cards-down.webp" class="w-full -mt-1 relative z-20" alt="ArrowBottom Slider Image" />
     <?php
     } else{ ?>
+        <div class="max-w-mdm mx-auto">
+            <p class="text-xl lg:text-4xl font-semibold text-gray-900 mb-4 px-10 lg:px-0 lg:text-left text-center">
+                <?= $title ?> 
+                <hr class="w-full lg:w-2/12 h-2 border-solid border-t-4 mb-4 border-yellow-600"/>
+            </p>
+        </div>
         <div class="carousel-wrapper p-6 gap-x-4 relative max-w-mdm mx-auto overflow-hidden member-wrapper">
+
                 <?php
                 while ($products_query->have_posts()) {
                     $products_query->the_post();

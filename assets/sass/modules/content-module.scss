@@ -4,6 +4,10 @@ $large: 1024px;
     h1, h2, h3, h4, h5{
         margin: 16px 0px 8px 0px;
     }
+    a{
+        color: #326CEC;
+        font-weight: 600;
+    }
     h1{
         @media screen and (max-width: $large){
             font-size: 24px;
