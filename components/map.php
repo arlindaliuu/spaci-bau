@@ -1,7 +1,7 @@
 <?php
     $data = get_field('contact_details_group', 'option'); 
 ?>
-<div class="grid lg:grid-cols-2 p-6 md:p-20 max-w-mdm m-auto">
+<div class="grid lg:grid-cols-2 max-w-mdm m-auto">
     <div class="grid targetDiv animate-duration-[3000ms]">
         <h1 class="text-3xl lg:text-4xl font-semibold text-blue-50 underline">Standort <br> <span>&</span> <br>Öffnungszeiten</h1>
         <h2 class="md:mt-10 mt-5 text-2xl lg:text-3xl font-content">Öffnungszeiten</h2>
