@@ -1,11 +1,8 @@
-<?php get_header(); ?>
-<div id="loader">
-  <div class="battery-container">
-    <div class="battery-fill" id="battery-fill"></div>
-  </div>
-  <div class="battery-text">Wird geladen...</div>
-</div>
-<div id="content" class="content-loaded" style="display: none;">
+<?php
+get_header(); 
+get_template_part('components/loader') ;   
+?>
+
 <div id="content" class="site-content mt-24">
     <div class="container m-auto">
         <div id="primary" class="content-area">

@@ -3,14 +3,9 @@
  * Template Name: Member
  */
 
-get_header(); ?>
-<div id="loader">
-  <div class="battery-container">
-    <div class="battery-fill" id="battery-fill"></div>
-  </div>
-  <div class="battery-text">Wird geladen...</div>
-</div>
-<div id="content" class="content-loaded" style="display: none;">
+get_header(); 
+get_template_part('components/loader');  
+?>
     <?php    
         if (have_posts()) {
             while (have_posts()) {

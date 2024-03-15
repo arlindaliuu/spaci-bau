@@ -3,14 +3,8 @@
 Template Name: Contact Us
 */
 get_header();
+get_template_part('components/loader');  
 ?>
-<div id="loader">
-  <div class="battery-container">
-    <div class="battery-fill" id="battery-fill"></div>
-  </div>
-  <div class="battery-text">Wird geladen...</div>
-</div>
-<div id="content" class="content-loaded" style="display: none;">
 <?php $data = get_field('whats_app', 'option'); ?>
 <section class="bg-gray-100 py-16 px-4 md:px-0 contact-page">
     <div class="container mx-auto">

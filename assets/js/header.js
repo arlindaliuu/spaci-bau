@@ -115,26 +115,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
 document.addEventListener("DOMContentLoaded", function() {
-  var loader = document.getElementById('loader');
-  var content = document.getElementById('content');
-  var batteryFill = document.getElementById('battery-fill');
-  var batteryText = document.querySelector('.battery-text');
-  var progress = 0;
-  var intervalId = setInterval(function() {
-    progress += 1;
-    if(batteryFill){
-    batteryFill.style.width = progress + '%';
-      if (progress >= 100) {
-        clearInterval(intervalId);
-        loader.style.opacity = '0';
-        setTimeout(function() {
-          loader.style.display = 'none';
-          content.style.display = 'block';
-        }, 100); 
-      }
-    }
-  }, 20);
+  // Show the loader initially
+  document.getElementById("loader").style.display = "flex";
+
+  // Function to update the loading dots
+  function updateLoadingDots() {
+      const dotsElement = document.getElementById("loading-dots");
+      dotsElement.textContent = dotsElement.textContent.length < 3 ? dotsElement.textContent + '.' : '.';
+  }
+
+  // Update loading dots every 500 milliseconds
+  const loadingDotsInterval = setInterval(updateLoadingDots, 500);
+
+  // Hide the loader with transition once the page is fully loaded
+  window.addEventListener("load", function() {
+      clearInterval(loadingDotsInterval); // Stop updating the loading dots
+      const loaderElement = document.getElementById("loader");
+      loaderElement.classList.add("hidden"); // Add 'hidden' class to trigger transition
+      setTimeout(function() {
+          loaderElement.style.display = "none"; // Hide the loader after transition ends
+      }, 500); // Wait for the duration of transition (0.5s in this case)
+  });
+});
 
 
 //Sticky header
@@ -173,7 +177,7 @@ function addAndRemoveClassInLoop(elementId, className, duration) {
 
 // Usage: Call the function with the ID of your HTML element, the class you want to add/remove, and the duration in milliseconds (5000 ms = 5 seconds).
 addAndRemoveClassInLoop('whatsapp-button', 'animate-shake', 5000);
-});
+
 
 document.addEventListener("DOMContentLoaded", function() {
   var submitButton = document.querySelector(".wpcf7-submit");
