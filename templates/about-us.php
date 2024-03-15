@@ -1,16 +1,9 @@
-<!-- 
-<div id="loader">
-  <div class="battery-container">
-    <div class="battery-fill" id="battery-fill"></div>
-  </div>
-  <div class="battery-text">Wird geladen...</div>
-</div>
-<div id="content" class="content-loaded" style="display: none;"> -->
 <?php
 /*
 Template Name: About Us
 */
 get_header();
+get_template_part('components/loader');  
 ?>
     <div class="parallax">
         <div class="parallax-content w-full">

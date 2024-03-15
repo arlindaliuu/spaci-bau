@@ -1,13 +1,7 @@
-<?php get_header(); ?>
-<!-- <div id="loader">
-  <div class="battery-container">
-    <div class="battery-fill" id="battery-fill"></div>
-  </div>
-  <div class="battery-text">Wird geladen...</div>
-</div>
-<div id="content" class="content-loaded" style="display: none;"> -->
-
 <?php 
+get_header();
+get_template_part('components/loader');   
+
   $modules = get_field('field_1', get_the_ID()); 
   
   foreach ($modules as $index => $module) { ?> 

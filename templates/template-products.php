@@ -3,16 +3,8 @@
  * Template Name: Projects
  */
 get_header();
+get_template_part('components/loader');  
 
-?>
-<div id="loader">
-  <div class="battery-container">
-    <div class="battery-fill" id="battery-fill"></div>
-  </div>
-  <div class="battery-text">Wird geladen...</div>
-</div>
-<div id="content" class="content-loaded" style="display: none;">
-<?php
 $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 
 // Query all projects

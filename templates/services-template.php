@@ -1,17 +1,10 @@
-
-<!-- <div id="loader">
-  <div class="battery-container">
-    <div class="battery-fill" id="battery-fill"></div>
-  </div>
-  <div class="battery-text">Wird geladen...</div>
-</div>
-<div id="content" class="content-loaded" style="display: none;"> -->
 <?php
 $services = get_field('field_services', 'option');
 $sevices_main_title = get_field('service_main_title', 'option');
 $sevices_main_content = get_field('service_main_content', 'option');
 /* Template Name: Services */
 get_header();
+get_template_part('components/loader');  
 ?>
   <div class="parallax" data-speed="0.5">
       <div class="parallax-content w-full">

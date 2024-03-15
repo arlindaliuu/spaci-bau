@@ -1,13 +1,8 @@
 <?php
 get_header();
+get_template_part('components/loader') ;   
 ?>
-<div id="loader">
-  <div class="battery-container">
-    <div class="battery-fill" id="battery-fill"></div>
-  </div>
-  <div class="battery-text">Wird geladen...</div>
-</div>
-<div id="content" class="content-loaded" style="display: none;">
+
 <div class="parallax">
     <div class="parallax-content w-full">
         <p class="text-3xl text-white font-bold"><?php get_title(); ?></p>
