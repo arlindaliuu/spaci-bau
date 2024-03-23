@@ -5,7 +5,7 @@ $sevices_main_content = get_field('service_main_content', 'option');
 ?>
 <!-- Section: Services -->
 <section class="my-10">
-    <div class="targetDiv animate-duration-[3000ms] max-w-mdm m-auto py-20 xl:px-0 px-10">
+    <div class="targetDiv animate-duration-[3000ms] max-w-mdm m-auto">
         <div>
             <h2 class="text-xl lg:text-4xl font-semibold text-blue-50"><?= $sevices_main_title ?></h2>
         <div>

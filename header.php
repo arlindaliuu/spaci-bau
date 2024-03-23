@@ -129,5 +129,8 @@
     </div>
     </div>
   </div>
+  <div id="progress-container" class="fixed top-[82px] lg:top-[90px] left-0 w-full z-[9999] h-1 bg-transparent">
+    <div id="progress-bar"></div>
+  </div>
   </header>
   <?php wp_footer(); ?>

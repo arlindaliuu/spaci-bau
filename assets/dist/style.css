@@ -487,6 +487,23 @@
   background-image: url("/wp-content/themes/spaci-bau/assets/images/footer-bg.webp");
 }
 
+/* CSS for the progress bar */
+#progress-bar {
+  width: 0;
+  height: 100%;
+  background-image: linear-gradient(to right, #ff5733, #ffbd33, #33ff6b, #336aff, #ff33de);
+  background-size: 200% auto;
+  animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
 /* 
 Import modules folder
 */
