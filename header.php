@@ -8,7 +8,7 @@
 <meta name="description" content="Entdecken Sie Handwerkskunst und Zuverlässigkeit mit Spaci Bau, unserer Bauunternehmung. Von der Errichtung von Häusern und Wohnungen bis zur Umgestaltung von Gärten setzen wir Visionen präzise und sorgfältig um. Entdecken Sie unser Leistungsspektrum und lassen Sie uns Ihre Bau-Träume wahr werden lassen.">
 <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/manifest.json">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="preload" href="<?= get_bloginfo('url')?>/wp-content/uploads/2024/02/paral-11.webp" as="image" />
+<link rel="preload" href="<?= get_bloginfo('url')?>/wp-content/uploads/2024/02/paral-11.webp" as="image" type="image/webp" />
 <link rel="preload" href="<?= get_stylesheet_directory_uri() ?>/assets/icons/preloader.svg" as="image" type="image/svg+xml" crossorigin="anonymous" />
 <?php wp_head(); ?>
 </head>

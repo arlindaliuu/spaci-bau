@@ -118,7 +118,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener("DOMContentLoaded", function() {
   // Show the loader initially
-  document.getElementById("loader").style.display = "flex";
+  const loader = document.getElementById("loader");
+  if(loader){
+    loader.style.display = "flex";
+  }
 
   // Function to update the loading dots
   function updateLoadingDots() {
@@ -132,10 +135,13 @@ document.addEventListener("DOMContentLoaded", function() {
   // Hide the loader with transition once the page is fully loaded
   window.addEventListener("load", function() {
       clearInterval(loadingDotsInterval); // Stop updating the loading dots
-      const loaderElement = document.getElementById("loader");
-      loaderElement.classList.add("hidden"); // Add 'hidden' class to trigger transition
+      if(loader){
+        loader.classList.add("hidden"); // Add 'hidden' class to trigger transition
+      }
       setTimeout(function() {
-          loaderElement.style.display = "none"; // Hide the loader after transition ends
+        if(loader){
+          loader.style.display = "none"; // Hide the loader after transition ends
+        }
       }, 500); // Wait for the duration of transition (0.5s in this case)
   });
 });

@@ -12,7 +12,7 @@ get_template_part('components/loader');
           <p><?php custom_breadcrumbs("absolute top-1/2 w-full text-center -translate-x-1/2 left-1/2 text-lg text-white mt-10") ?></p>
       </div>
   </div>
-  <div class="grid gap-4 mt-6 max-w-5xl mx-auto my-10">
+  <div class="grid gap-4 mt-6 px-4 max-w-5xl mx-auto my-10">
             <p class="text-3xl font-bold"><?= $sevices_main_title ?></p>
             <p><?= $sevices_main_content ?></p>
             <hr class="w-full border">

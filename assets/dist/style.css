@@ -263,8 +263,8 @@
   }
 }
 
-.parallax-products {
-  background-image: url("../../assets/images/parallax.webp");
+.parallax-projects {
+  background-image: url("../../assets/images/sliderhome.jpg");
   height: 500px;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -272,7 +272,7 @@
   background-size: cover;
 }
 @media only screen and (max-width: 1024px) {
-  .parallax-products {
+  .parallax-projects {
     background-attachment: scroll;
   }
 }
@@ -762,7 +762,7 @@ li.has-children.hover > .sub_item {
 }
 
 .svg-link:hover .icon-path {
-  stroke: #ff7523;
+  stroke: #FDE761;
   transition: stroke 0.3s ease-in-out;
   transform: scale(1.1);
 }
