@@ -43,7 +43,7 @@
     class Custom_Nav_Walker extends Walker_Nav_Menu {
       // Add the dropdown toggle for menu items that have children
       function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
-        $output .= '<li class="relative group m-2 mx-4';
+        $output .= '<li class="relative group m-2 mx-4 whitespace-nowrap';
     
         // Check if the menu item has children
         $has_children = !empty($item->classes) && in_array('menu-item-has-children', $item->classes);
@@ -121,11 +121,11 @@
         }
       }
     }
-    $whatsapp = get_field('whats_app', 'option');
+    $whatsapp = get_field('contact_details_group', 'option'); 
 
     ?>
     <div class="lg:border-l-2 my-2 p-2 flex justify-center items-center lg:border-l-yellow-500">
-      <a href="tel:<?= urlencode($whatsapp['number']) ?>" class="uppercase font-bold text-center bg-yellow-500 mx-2 shadow-lg rounded-3xl border px-3 hover:scale-110 hover:shadow-2xl py-2 text-white duration-200">Jetzt anrufen!</a>
+      <a href="tel:<?= urlencode($whatsapp['website_phone_no']) ?>" class="uppercase font-bold text-center bg-yellow-500 mx-2 shadow-lg rounded-3xl border px-3 hover:scale-110 hover:shadow-2xl py-2 text-white duration-200">Jetzt anrufen!</a>
     </div>
     </div>
   </div>

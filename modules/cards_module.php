@@ -34,7 +34,7 @@ if ($products_query->have_posts()) {
     <div class="wrapper-carousel flex justify-center items-center relative flex-wrap flex-col z-20">
         <div class="carousel pt-20">
             <p class="text-2xl lg:text-4xl font-semibold text-gray-900 mb-10 px-10 lg:px-0 lg:text-left text-center"><?= $title ?> <hr class="w-full lg:w-2/12 h-2 border-solid border-t-4 border-yellow-600"/></p>
-            <div class="carousel-wrapper p-6 gap-x-4 relative">
+            <div class="carousel-wrapper p-6 gap-x-4 relative 2xl:max-w-mdm md:max-w-screen-lg">
                 <div class="carousel-bg"></div>
 
                 <?php
@@ -48,7 +48,7 @@ if ($products_query->have_posts()) {
                         }
                     }
                     ?>
-                    <div class="card border xl:mx-0 md:mx-20 hidden xl:block bg-gray-200 p-4 md:max-w-[324px] min-h-[503px] rounded-lg relative">
+                    <div class="card border xl:mx-0 md:mx-2 hidden md:block bg-gray-200 p-4 md:max-w-[324px] min-h-[503px] rounded-lg relative">
                         <article class="flex flex-col h-full" id="post-<?php the_ID(); ?>">
                             <?php if (has_post_thumbnail()) { ?>
                                 <div class="md:min-w-[292px] min-h-[225px] max-h-[225px] bg-gray-300 bg-cover bg-center" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"></div>
@@ -86,7 +86,7 @@ if ($products_query->have_posts()) {
                 <hr class="w-full lg:w-2/12 h-2 border-solid border-t-4 mb-4 border-yellow-600"/>
             </p>
         </div>
-        <div class="carousel-wrapper p-6 gap-x-4 relative max-w-mdm mx-auto overflow-hidden member-wrapper">
+        <div class="carousel-wrapper p-6 gap-x-4 relative lg:max-w-mdm md:max-w-screen-lg mx-auto overflow-hidden member-wrapper">
 
                 <?php
                 while ($products_query->have_posts()) {
@@ -99,7 +99,7 @@ if ($products_query->have_posts()) {
                         }
                     }
                     ?>
-                    <div class="card border xl:mx-0 md:mx-20 hidden xl:block bg-gray-200 p-4 md:max-w-[324px] min-h-[503px] rounded-lg relative">
+                    <div class="card border xl:mx-0 md:mx-2 hidden md:block bg-gray-200 p-4 md:max-w-[324px] min-h-[503px] rounded-lg relative">
                         <article class="flex flex-col h-full" id="post-<?php the_ID(); ?>">
                             <?php if (has_post_thumbnail()) { ?>
                                 <div class="md:min-w-[292px] min-h-[225px] max-h-[225px] bg-gray-300 bg-cover bg-center" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"></div>

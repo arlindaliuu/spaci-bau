@@ -13,8 +13,8 @@
                 <a href="/uber-uns" class="button-48 mt-6"><span>Erfahren Sie mehr &#8594;</span></a>
             </div>
             <div class="w-full relative grid grid-cols-2">
-                <p class="bg-yellow-500 font-bold justify-center items-center p-4 text-gray-900 text-sm lg:text-xl block"><span class="number-counter text-2xl lg:text-4xl mr-2">269</span> Gesamtprojekte</p>
-                <p class="bg-gray-900 font-bold justify-center items-center p-4 text-white text-sm lg:text-xl block"><span class="number-counter text-2xl lg:text-4xl mr-2">81</span> qualifizierte Arbeitskräfte</p>
+                <p class="bg-yellow-500 font-bold justify-center items-center p-4 text-gray-900 text-sm lg:text-xl grid"><span class="number-counter text-2xl lg:text-4xl mr-2">269</span> Gesamtprojekte</p>
+                <p class="bg-gray-900 font-bold justify-center items-center p-4 text-white text-sm lg:text-xl grid"><span class="number-counter text-2xl lg:text-4xl mr-2">81</span> qualifizierte Arbeitskräfte</p>
             </div>
         </div>
         <div class="lg:col-span-1">

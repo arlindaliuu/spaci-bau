@@ -103,8 +103,8 @@ get_template_part('components/loader');
                                         <div class="grid grid-cols-2 justify-between gap-2 lg:gap-10 mt-2">
                                             <div class="border-2 hover:shadow-2xl rounded-md w-full h-full">
                                             <?php 
-                                            $whatsapp = get_field('whats_app', 'option');
-                                            $whatsapp_number = $whatsapp['number'];
+                                            $whatsapp = get_field('contact_details_group', 'option'); 
+                                            $whatsapp_number = urlencode($whatsapp['website_phone_no']);
                                             $current_page_title = get_the_title();
                                             $additional_text = "Hallo, ich interessiere mich für '{$current_page_title}'. Können Sie mir weitere Informationen zu diesem Produkt geben?";
                                             $encoded_message = urlencode($additional_text);
