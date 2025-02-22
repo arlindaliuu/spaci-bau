@@ -3,9 +3,11 @@ get_header();
 get_template_part('components/loader');   
 
   $modules = get_field('field_1', get_the_ID()); 
-  
   foreach ($modules as $index => $module) { ?> 
-    <div class="module-<?= $module['acf_fc_layout'] ?>">
+  <?php $module_type = $module['acf_fc_layout']; ?>
+    <div class="module-<?= $module_type; ?>
+      <?= $module_type == 'cards_module' ? 'overflow-hidden' : '';  ?>"
+    >
       <?php
         getModules($module['acf_fc_layout'], $module);
       ?>

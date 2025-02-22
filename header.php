@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="de">
-  <title> Spaci Bau - Experten für Bauarbeiten und Gartengestaltung</title>
+  <title> Franci Bau - Experten für Bauarbeiten und Gartengestaltung</title>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#ff7523"/>
-<meta name="description" content="Entdecken Sie Handwerkskunst und Zuverlässigkeit mit Spaci Bau, unserer Bauunternehmung. Von der Errichtung von Häusern und Wohnungen bis zur Umgestaltung von Gärten setzen wir Visionen präzise und sorgfältig um. Entdecken Sie unser Leistungsspektrum und lassen Sie uns Ihre Bau-Träume wahr werden lassen.">
+<meta name="description" content="Entdecken Sie Handwerkskunst und Zuverlässigkeit mit Franci Bau, unserer Bauunternehmung. Von der Errichtung von Häusern und Wohnungen bis zur Umgestaltung von Gärten setzen wir Visionen präzise und sorgfältig um. Entdecken Sie unser Leistungsspektrum und lassen Sie uns Ihre Bau-Träume wahr werden lassen.">
 <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/manifest.json">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="preload" href="<?= get_bloginfo('url')?>/wp-content/uploads/2024/02/paral-11.webp" as="image" type="image/webp" />
@@ -17,10 +17,10 @@
       $logo_url = get_field('website_logo', 'option');
 ?>
 <header id="main-header" class="z-40 w-full">
-  <div class="header min-h-[70px] lg:max-h-[90px] w-full grid lg:grid-cols-2 bg-white lg:bg-transparent shadow-lg z-40 relative backdrop-blur-2xl">
-    <div class="sticky sticky__header bg-yellow-500 lg:bg-none">
-      <a class="lg:pl-6 lg:pt-6 p-4 pl-0 block w-9/12" href="/">
-        <img src="<?= $logo_url; ?>" alt="Logo" class="max-h-[50px] max-w-[240px] object-contain" width="240" height="50" />
+  <div class="header min-h-[70px] xl:max-h-[110px] w-full grid xl:grid-cols-2 bg-white xl:bg-transparent shadow-lg z-40 relative backdrop-blur-2xl">
+    <div class="sticky sticky__header bg-yellow-500 xl:bg-none">
+      <a class="xl:pl-6 xl:pt-6 p-4 block" href="/">
+        <img src="<?= $logo_url; ?>" alt="Logo" class="max-h-[70px] xl:max-w-[200px] max-w-[150px]" width="200" height="50" />
       </a>
     </div>
     <div class="burger">
@@ -29,13 +29,13 @@
       <span></span>
     </div>
     <?php get_template_part('loading-screen'); ?>
-    <div class="lg:flex gap-2 justify-end lg:mr-10 ml-0 pt-3 lg:pt-0 nav_header hidden">
+    <div class="xl:flex gap-2 justify-end xl:mr-10 ml-0 pt-3 xl:pt-0 nav_header hidden">
     <?php
     // Display the "primary-menu" navigation menu
     wp_nav_menu(array(
       'theme_location' => 'primary-menu',
       'container' => 'nav',
-      'container_class' => 'lg:flex min-h-[70px] lg:max-h-[90px] justify-start items-center gap-x-4 animate-fade-up',
+      'container_class' => 'xl:flex min-h-[70px] xl:max-h-[110px] justify-start items-center gap-x-4 animate-fade-up',
       'fallback_cb' => false, // Disable fallback menu
       'walker' => new Custom_Nav_Walker()
     ));
@@ -68,7 +68,7 @@
     
         // If the menu item has children, open the sub-menu (dropdown) container
         if ($has_children) {
-          $output .= '<ul class="sub_item lg:absolute mt-2 py-2 bg-blue-700 opacity-90 text-white rounded-md shadow-lg lg:w-max hidden">';
+          $output .= '<ul class="sub_item xl:absolute mt-2 py-2 z-30 bg-blue-700 opacity-90 text-white rounded-md shadow-lg xl:w-max hidden">';
         }
       }
     
@@ -124,12 +124,12 @@
     $whatsapp = get_field('contact_details_group', 'option'); 
 
     ?>
-    <div class="lg:border-l-2 my-2 p-2 flex justify-center items-center lg:border-l-yellow-500">
+    <div class="xl:border-l-2 my-2 p-2 flex justify-center items-center xl:border-l-yellow-500">
       <a href="tel:<?= urlencode($whatsapp['website_phone_no']) ?>" class="uppercase font-bold text-center bg-yellow-500 mx-2 shadow-lg rounded-3xl border px-3 hover:scale-110 hover:shadow-2xl py-2 text-white duration-200">Jetzt anrufen!</a>
     </div>
     </div>
   </div>
-  <div id="progress-container" class="fixed top-[82px] lg:top-[90px] left-0 w-full z-[9999] h-1 bg-transparent">
+  <div id="progress-container" class="fixed top-[82px] xl:top-[90px] left-0 w-full z-20 h-1 bg-transparent">
     <div id="progress-bar"></div>
   </div>
   </header>

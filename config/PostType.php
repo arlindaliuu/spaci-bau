@@ -63,29 +63,29 @@ add_action( 'init', 'project_post_type' );
 
 function member_post_type() {
     $labels = array(
-        'name'               => __( 'Members', 'text-domain' ),
-        'singular_name'      => __( 'Member', 'text-domain' ),
-        'add_new'            => __( 'Add New Member', 'text-domain' ),
-        'add_new_item'       => __( 'Add New Member', 'text-domain' ),
-        'edit_item'          => __( 'Edit Member', 'text-domain' ),
-        'new_item'           => __( 'New Member', 'text-domain' ),
-        'view_item'          => __( 'View Member', 'text-domain' ),
+        'name'               => __( 'Arbeitnehmer', 'text-domain' ),
+        'singular_name'      => __( 'Arbeitnehmer', 'text-domain' ),
+        'add_new'            => __( 'Neues Mitglied hinzufügen', 'text-domain' ),
+        'add_new_item'       => __( 'Neues Mitglied hinzufügen', 'text-domain' ),
+        'edit_item'          => __( 'Mitglied bearbeiten', 'text-domain' ),
+        'new_item'           => __( 'Neues Mitglied', 'text-domain' ),
+        'view_item'          => __( 'Mitglied anzeigen', 'text-domain' ),
         'search_items'       => __( 'Search Members', 'text-domain' ),
-        'not_found'          => __( 'No members found', 'text-domain' ),
-        'not_found_in_trash' => __( 'No members found in Trash', 'text-domain' ),
-        'parent_item_colon'  => __( 'Parent Member:', 'text-domain' ),
-        'menu_name'          => __( 'Members', 'text-domain' ),
+        'not_found'          => __( 'Mitglieder suchen', 'text-domain' ),
+        'not_found_in_trash' => __( 'Keine Mitglieder im Papierkorb gefunden', 'text-domain' ),
+        'parent_item_colon'  => __( 'Übergeordnetes Mitglied:', 'text-domain' ),
+        'menu_name'          => __( 'Arbeitnehmer', 'text-domain' ),
     );
 
     $args = array(
         'labels'              => $labels,
         'hierarchical'        => false,
         'description'         => 'Custom post type for members',
-        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+        'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
         'public'              => true,
         'publicly_queryable'  => true,
         'query_var'           => true,
-        'rewrite'             => array( 'slug' => 'members' ),
+        'rewrite'             => array( 'slug' => 'arbeitnehmer' ),
         'has_archive'         => true,
         'menu_position'       => 3,
     );

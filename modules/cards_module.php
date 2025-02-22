@@ -87,7 +87,6 @@ if ($products_query->have_posts()) {
             </p>
         </div>
         <div class="carousel-wrapper p-6 gap-x-4 relative lg:max-w-mdm md:max-w-screen-lg mx-auto overflow-hidden member-wrapper">
-
                 <?php
                 while ($products_query->have_posts()) {
                     $products_query->the_post();
@@ -102,11 +101,12 @@ if ($products_query->have_posts()) {
                     <div class="card border xl:mx-0 md:mx-2 hidden md:block bg-gray-200 p-4 md:max-w-[324px] min-h-[503px] rounded-lg relative">
                         <article class="flex flex-col h-full" id="post-<?php the_ID(); ?>">
                             <?php if (has_post_thumbnail()) { ?>
-                                <div class="md:min-w-[292px] min-h-[225px] max-h-[225px] bg-gray-300 bg-cover bg-center" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"></div>
+                                <div class="md:min-w-[292px] min-h-[225px] max-h-[225px] bg-gray-300 bg-cover bg-top" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"></div>
                             <?php } ?>
                             <div class="py-4 h-full">
                                 <h2 class="text-lg lg:text-xl font-bold mb-2 title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                                 <p class="text-gray-700 mb-4 text-base content-card"><?php echo get_the_excerpt(); ?></p>
+                                <?php echo wp_trim_words(get_the_content(), 14, '...'); ?>
                             </div>
                             <a href="<?php the_permalink(); ?>" class="w-full self-end px-4 py-2 bg-yellow-500 text-black font-bold block text-center rounded-lg hover:bg-blue-50 hover:text-white duration-300 hover:scale-105">
                                 Weiterlesen

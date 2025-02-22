@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Navigate to your theme directory on the live server
-cd /home/forumiri/public_html/wp-content/themes/spaci-bau
+cd /home/forumiri/public_html/wp-content/themes/Franci-bau
 
 # Pull changes from the Git repository
 git pull origin main

@@ -38,7 +38,7 @@ $product_categories = get_terms(array(
     <div class="col-span-2">
         <div class="parallax parallax-projects">
             <div class="parallax-content bg-black-700 w-96 top-1/2 bg-opacity-75 p-6">
-                <p class="text-3xl text-white font-bold capitalize"><?php if(empty($_GET['category'])){ echo 'Alle Spaci Bau Projekteaa'; } else{ echo $_GET['category']; } ?></p>
+                <p class="text-3xl text-white font-bold capitalize"><?php if(empty($_GET['category'])){ echo 'Alle Franci Bau Projekteaa'; } else{ echo $_GET['category']; } ?></p>
                 <?php custom_breadcrumbs("text-white") ?>
             </div>
         </div>

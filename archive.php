@@ -19,7 +19,7 @@ get_template_part('components/loader');
                     $category = $urlParts[$categoryIndex + 1];
                     echo urldecode($category);
                 } else {
-                    echo 'Alle Spaci Bau Projekte';
+                    echo 'Alle Franci Bau Projekte';
                 }
                 ?>
             </p>

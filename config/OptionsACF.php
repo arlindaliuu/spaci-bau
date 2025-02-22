@@ -2,9 +2,9 @@
 // Register ACF Options Page
 if( function_exists('acf_add_options_page') ) {
     acf_add_options_page(array(
-        'page_title'    => 'Spaci Bau Options',
-        'menu_title'    => 'Spaci Bau Options',
-        'menu_slug'     => 'spaci-bau-options',
+        'page_title'    => 'Franci Bau Options',
+        'menu_title'    => 'Franci Bau Options',
+        'menu_slug'     => 'franci-bau-options',
         'capability'    => 'edit_posts',
         'redirect'      => false
     ));
@@ -13,7 +13,7 @@ if( function_exists('acf_add_options_page') ) {
 // Define ACF Field Group for Theme Options
 acf_add_local_field_group(array(
     'key' => 'group_theme_options',
-    'title' => 'Spaci Bau Options',
+    'title' => 'Franci Bau Options',
     'fields' => array(
         array(
             'key' => 'field_custom_website_name',
@@ -41,7 +41,7 @@ acf_add_local_field_group(array(
             array(
                 'param' => 'options_page',
                 'operator' => '==',
-                'value' => 'spaci-bau-options',
+                'value' => 'franci-bau-options',
             ),
         ),
     ),
@@ -99,7 +99,7 @@ acf_add_local_field_group(array(
             array(
                 'param' => 'options_page',
                 'operator' => '==',
-                'value' => 'spaci-bau-options',
+                'value' => 'franci-bau-options',
             ),
         ),
     ),
@@ -157,7 +157,7 @@ acf_add_local_field_group(array(
             array(
                 'param' => 'options_page',
                 'operator' => '==',
-                'value' => 'spaci-bau-options',
+                'value' => 'franci-bau-options',
             ),
         ),
     ),
@@ -214,7 +214,7 @@ acf_add_local_field_group(array(
             array(
                 'param' => 'options_page',
                 'operator' => '==',
-                'value' => 'spaci-bau-options',
+                'value' => 'franci-bau-options',
             ),
         ),
     ),

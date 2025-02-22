@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1280px) {
   .header .sticky__header {
     background-color: unset;
   }
@@ -8,7 +8,7 @@
   color: #172647;
   display: flex;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1280px) {
   .header .menu {
     display: grid;
   }
@@ -46,7 +46,7 @@
   transition: 0.5s ease-in-out;
   cursor: pointer;
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1280px) {
   .burger {
     display: block;
   }
@@ -157,7 +157,6 @@
 .wpcf7 .wpcf7-form .wpcf7-not-valid-tip {
   font-size: 13px;
   margin-top: 8px;
-  color: black;
 }
 .wpcf7 .wpcf7-form p:nth-child(2) .wpcf7-form-control {
   width: 100%;

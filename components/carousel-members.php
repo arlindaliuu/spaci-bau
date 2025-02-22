@@ -13,7 +13,7 @@ $products_query = new WP_Query($args);
         <hr class="ml-5 w-2/12 h-2 border-solid border-t-4 border-orange-500"/>
     </div>
     <div class="col-span-2">
-        <p class="text-black-700 text-md mt-4 lg:mt-0">Bringen Sie Win-Win-Überlebensstrategien auf den Tisch, um eine proaktive Vorherrschaft sicherzustellen. Letzten Endes ist für die Zukunft eine neue Normalität auf dem Weg zu einer optimierten Cloud-Lösung, die sich aus der Generation X entwickelt hat. Benutzergenerierte Inhalte in Echtzeit werden mehrere Touchpoints für das Offshoring haben.</p>
+        <p class="text-black-700 text-md mt-4 lg:mt-0">Lernen Sie unser Team kennen – die engagierten Fachkräfte hinter unserem Erfolg. Mit jahrelanger Erfahrung im Bauwesen sorgt unser qualifiziertes Team für höchste Qualität, Präzision und Zuverlässigkeit in jedem Projekt. Lernen Sie die Experten kennen, die Ihre Visionen verwirklichen!</p>
     </div>
   </div>
   <div class="flex justify-end gap-10">
@@ -33,18 +33,19 @@ $products_query = new WP_Query($args);
           }
         }
         ?>
-   <div class="card  xl:mx-0 md:mx-20 hidden xl:block p-4 md:max-w-[324px] rounded-lg relative">
+        <div class="card xl:-mx-2 md:mx-20 hidden xl:block p-4 md:max-w-[324px] rounded-lg relative select-none">
             <article class="flex flex-col h-full" id="post-<?php the_ID(); ?>">
               <?php if (has_post_thumbnail()) { ?>
-                <div class="mt-6 lg:mt-0 self-center">
-                        <?php the_post_thumbnail('full', array('class' => 'object-contain')); ?>
-                        <a href="<?php the_permalink(); ?>" class="mt-4 text-xl text-blue-50"><?php the_title(); ?></a>
-                    </div>              <?php } ?>
+                <div class="mt-6 lg:mt-0 self-center grid gap-4">
+                    <?php the_post_thumbnail('150, 150', array('class' => 'object-contain min-h-[150px] min-w-[150px] max-h-[150px] max-w-[150px] rounded-full')); ?>
+                    <a href="<?php the_permalink(); ?>" class="mt-4 text-xl text-blue-50 text-center font-bold"><?php the_title(); ?></a>
+                </div>              
+              <?php } ?>
             </article>
-            <?php $ribbon =  get_field('ribbon', get_the_ID());
-            if($ribbon){ ?> 
-            <div class="absolute -top-3 text-[9px] text-white px-2 py-1 rounded-lg right-4 <?php if ($ribbon[0] === "Bestes Produkt"){ ?> bg-blue-800 <?php } elseif($ribbon[0] === "Am billigsten"){ ?> bg-red-600 <?php } elseif($ribbon[0] === "die Bestseller"){ ?> bg-orange-100 <?php } ?> "><?php echo $ribbon[0]; ?></div>
-            <?php } ?>
+            <?php $ribbon =  get_the_excerpt();
+              if($ribbon){ ?> 
+                <div class="absolute -top-3 text-[9px] text-white px-2 py-1 rounded-lg right-4 bg-orange-100"><?php echo $ribbon; ?></div>
+              <?php } ?>
           </div>
         <?php
       }

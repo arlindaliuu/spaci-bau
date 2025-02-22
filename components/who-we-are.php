@@ -5,7 +5,7 @@
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pattern.jpg" alt="Pattern image" class="absolute top-0 lef-0 w-full h-full object-cover"/>
             <div class="relative p-10 grid lg:block">
                 <p class="uppercase sub-title">Wer sind wir</p>
-                <span class="text-2xl lg:text-4xl font-bold mt-6 block">Wir schätzen Ihr Vertrauen und bauen seit 1998 auf</span>
+                <span class="text-2xl lg:text-4xl font-bold mt-6 block">Wir schätzen Ihr Vertrauen und bauen seit 2018 auf</span>
                 <p class="mt-6">
                     Erleben Sie ein Niveau unserer Qualität sowohl bei Design- als auch bei Individualisierungsarbeiten. Ob für Sie oder von Ihnen, halten Sie zunächst eine gute Tat fest.
                     Die verarbeitende Industrie wurde während der Industriellen Revolution zu einem Schlüsselsektor der Produktion und Arbeit in europäischen und nordamerikanischen Ländern und brachte die früheren Handels- und Feudalwirtschaften durcheinander.
@@ -13,8 +13,8 @@
                 <a href="/uber-uns" class="button-48 mt-6"><span>Erfahren Sie mehr &#8594;</span></a>
             </div>
             <div class="w-full relative grid grid-cols-2">
-                <p class="bg-yellow-500 font-bold justify-center items-center p-4 text-gray-900 text-sm lg:text-xl grid"><span class="number-counter text-2xl lg:text-4xl mr-2">269</span> Gesamtprojekte</p>
-                <p class="bg-gray-900 font-bold justify-center items-center p-4 text-white text-sm lg:text-xl grid"><span class="number-counter text-2xl lg:text-4xl mr-2">81</span> qualifizierte Arbeitskräfte</p>
+                <p class="bg-yellow-500 font-bold justify-center items-center p-4 text-gray-900 text-sm lg:text-xl grid"><span class="number-counter text-2xl lg:text-4xl mr-2">120</span> Gesamtprojekte</p>
+                <p class="bg-gray-900 font-bold justify-center items-center p-4 text-white text-sm lg:text-xl grid"><span class="number-counter text-2xl lg:text-4xl mr-2">45</span> qualifizierte Arbeitskräfte</p>
             </div>
         </div>
         <div class="lg:col-span-1">
